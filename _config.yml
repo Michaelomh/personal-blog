@@ -4,7 +4,7 @@ author: Michael Ong
 github: https://github.com/michaelomh
 about: testing themes out and using css.
 google_analytics: UA-XXXXXXXX-Y
-avatar_url: /static/img/avatar.jpg
+avatar_url: {{ site.baseurl }}static/img/avatar.jpg
 
 enableTags: true
 tagarray: []
