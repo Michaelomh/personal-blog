@@ -29,7 +29,7 @@ title: Blog
         {% elsif page == 1 %}
         <li><a href="/blog/">{{ page }}</a></li>
         {% else %}
-        <li><a href="http://www.{{ site.url }}/blog/page{{ page }}/">{{ page }}</a></li>
+        <li><a href="http://{{ site.url }}/blog/page{{ page }}/">{{ page }}</a></li>
         {% endif %} {% endfor %}
     
         <li><a href="/page/{{ paginator.total_pages }}/">Last</a></li>

@@ -7,11 +7,21 @@
     <div class="container">
         <div class="col-sm-8 col-offset-1 main-layout">
             {{ content }}
-            <footer style="text-align:right;">
-                &copy; {{ site.author }} {% if site.github %} - <a href="{{ site.github }}">{{ site.github }}</a> - Powered by Jekyll. {% endif %}
+            <footer>
+                <div class="social">
+                    <ul>
+                        {% for link in site.social %}
+                        <li><a href="{{ link.link }}" target="_blank"><i class="fa fa-2x {{ link.icon }}"></i></a></li>
+                        {% endfor %}
+                    </ul>
+                    <div class="copyright">
+                        &copy; {{ site.author_long }} {% if site.github %} - Powered by Jekyll. {% endif %}
+                    </div>
+                </div>
             </footer>
         </div>
+        {% include footer.html %}
     </div>
 </body>
-{% include footer.html %}
+
 </html>

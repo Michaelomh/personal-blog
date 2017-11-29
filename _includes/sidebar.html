@@ -1,4 +1,4 @@
-<div class="col-sm-3">
+<div class="col-sm-4">
     <div class="fixed-condition">
         <a href="/"><img class="profile-avatar" src="/static/img/avatar.jpg" height="75px" width="75px" /></a>
         <h1 class="author-name">{{ site.author }}</h1>
@@ -7,23 +7,10 @@
             {{ site.about }}
         </div>
         {% endif %}
-        <div class="social">
-            <ul>
-                {% for link in site.social %}
-                <li><a href="{{ link.link }}" target="_blank"><i class="fa {{ link.icon }}"></i></a></li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="search" id="js-search">
-            <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
-            <ul class="search__results" id="js-search__results"></ul>
-        </div>
-        <hr />
+        
         <ul class="sidebar-nav">
-            <strong>Navigation</strong>
-            <li><a href="/">Home</a></li>
             {% for i in site.urls %}
-            <li><a class="about" href="{{ i.url }}">{{ i.text }}</a></li>
+            <li><a class="navi" href="{{ i.url }}">{{ i.text }}</a></li>
             {% endfor %}
         </ul>
     </div>

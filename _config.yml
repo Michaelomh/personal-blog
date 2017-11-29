@@ -1,8 +1,9 @@
 title: Datayse
-description: Descriptions and Stuff
-author: MICHAEL ONG
+description: Datayse
+author: Michael Ong
+author_long: Michael Ong Ming Hao
 github: https://github.com/Michaelomh
-about: About and Stuff
+about: My Journey for Data.
 
 enableTags: true
 tagarray: []
@@ -20,15 +21,15 @@ social:
     - icon: fa-behance-square
       link: "https://www.behance.net/MichaelOMH"
     - icon: fa-email
-      link: ""
+      link: "https://www.behance.net/MichaelOMH"
 
 urls:
-    - text: About Me
-      url: /about/
-    - text: My Projects
-      url: /projects/
+    - text: Search
+      url: /search/
     - text: Resume
       url: /resume/
+    - text: Projects
+      url: /projects/
     - text: Blog
       url: /blog/
 

@@ -1,4 +1,29 @@
-## My Stack Problems
+# Michael's Personal Blog
+__ Personal Blog and Portfolio built using Jekyll. __<br>
+
+__ Original Themed by:__ [Agus Makmun](https://github.com/agusmakmun/agusmakmun.github.io)<br>
+__ Super Search by:__ [chinchang](https://github.com/chinchang/super-search)<br>
+__ Heavily Modified and Redesigned by:__ [Michael Ong](https://github.com/michaelomh)
+
+### Demo
+* [http://www.datayse.com](http://www.datayse.com)
+
+#### Features
+
+* Sitemap and XML Feed
+* Pagination in blog
+* Posts under category
+* Realtime Search Posts _(title & description)_ by query. - using super search
+* Related Posts
+* Next & Previous Post
+* Projects page & Detail Project page
+
+### Install & Configuration
+
+1. Fork this repository
+2. Edit site settings inside file of `_config.yml`
+3. Edit your projects at file of `projects.md`, `_data/projects.json` and inside path of `_project/` _(for detail project)_.
+4. Edit about yourself inside file of `about.md`
 
 ### How to Use?
 
@@ -25,16 +50,15 @@ Inside the file of it,
 ```
 ---
 layout: post                          # (require) default post layout
+
 title: "Your Title"                   # (require) a string title
+
 date: 2016-04-20 19:51:02 +0700       # (require) a post date
+
 categories: [python, django]          # (custom) some categories, but makesure these categories already exists inside path of `category/`
+
 tags: [foo, bar]                      # (custom) tags only for meta `property="article:tag"`
+
 image: Broadcast_Mail.png             # (custom) image only for meta `property="og:image"`, save your image inside path of `static/img/_posts`
+
 ---
-
-# your content post with markdown syntax goes here...
-```
-
-### Contributing
-
-Feel free to [open a bug](https://github.com/agusmakmun/agusmakmun.github.io/issues) or [contribute to code](https://github.com/agusmakmun/agusmakmun.github.io/pulls)!
