@@ -37,5 +37,23 @@
 		"image": "placeholder.jpg",
 		"date": "Oct 2016",
 		"tags": ["Design","Development"]
+	},
+    	{
+		"name": "Cool project 7",
+		"image": "placeholder.jpg",
+		"date": "Oct 2016",
+		"tags": ["Data Analytics"]
+	},
+	{
+		"name": "Cool project 8",
+		"image": "placeholder.jpg",
+		"date": "Oct 2016",
+		"tags": ["Design","Development"]
+	},
+	{
+		"name": "Cool project 9",
+		"image": "placeholder.jpg",
+		"date": "Oct 2016",
+		"tags": ["Design","Development"]
 	}
 ]

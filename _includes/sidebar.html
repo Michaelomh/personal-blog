@@ -1,18 +1,20 @@
-<div class="col-sm-4">
+<div class="col-sm-4" style="padding-left:0px;">
     <div class="fixed-condition">
-        <a href="/"><img class="profile-avatar" src="/static/img/avatar.jpg" height="75px" width="75px" /></a>
-        <h1 class="author-name">{{ site.author }}</h1>
+        <a href="/">
+            <img class="profile-avatar img-responsive" src="/static/img/avatar.png" />
+        </a>
+
         {% if site.about %}
+        <hr style="margin: 10px;">
         <div class="profile-about">
             {{ site.about }}
         </div>
         {% endif %}
-        
+
         <ul class="sidebar-nav">
             {% for i in site.urls %}
             <li><a class="navi" href="{{ i.url }}">{{ i.text }}</a></li>
             {% endfor %}
         </ul>
     </div>
-    <!-- end /.fixed-condition -->
 </div>

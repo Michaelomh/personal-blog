@@ -3,24 +3,26 @@
 {% include head.html %}
 
 <body>
-    {% include sidebar.html %}
-    <div class="container">
-        <div class="col-sm-8 col-offset-1 main-layout">
-            {{ content }}
-            <footer>
-                <div class="social">
-                    <ul>
-                        {% for link in site.social %}
-                        <li><a href="{{ link.link }}" target="_blank"><i class="fa fa-2x {{ link.icon }}"></i></a></li>
-                        {% endfor %}
-                    </ul>
-                    <div class="copyright">
-                        &copy; {{ site.author_long }} {% if site.github %} - Powered by Jekyll. {% endif %}
+    <div class="col-sm-12" style="padding-left:0px;">
+        {% include sidebar.html %}
+        <div class="col-sm-8 ">
+            <div class="main-layout">
+                {{ content }}
+                <footer>
+                    <div class="social">
+                        <ul>
+                            {% for link in site.social %}
+                            <li><a href="{{ link.link }}" target="_blank"><i class="fa fa-2x {{ link.icon }}"></i></a></li>
+                            {% endfor %}
+                        </ul>
+                        <div class="copyright">
+                            &copy; {{ site.author_long }} - Powered by Jekyll.
+                        </div>
                     </div>
-                </div>
-            </footer>
+                </footer>
+            </div>
+            {% include footer.html %}
         </div>
-        {% include footer.html %}
     </div>
 </body>
 

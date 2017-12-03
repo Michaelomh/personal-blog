@@ -42,7 +42,7 @@ a,
 a:link,
 a:active {
     text-decoration: none;
-    color: #3fa757;
+    color: #000;
 }
 
 a:hover {
@@ -60,6 +60,9 @@ a:hover {
 .sidebar-nav {
     margin: 0;
     padding: 0;
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 25px;
 }
 
 .sidebar-nav li {
@@ -98,32 +101,34 @@ footer {
 }
 
 
-/* Left column */
+/* Sidebar */
 
 div.col-sm-4 {
     font-size: 11px;
     color: #666;
-}
-
-div.col-sm-4 strong {
-    font-size: 16px;
-    color: #4A4A4A;
-    font-weight: normal;
+    height: 100vh;
 }
 
 div.col-sm-4 div.profile-about {
     margin-top: 10px;
-    color: #8C8C8C;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    color: #fff;
 }
 
 div.col-sm-4 img.profile-avatar {
-    border-radius: 150px;
-    -webkit-border-radius: 150px;
-    -moz-border-radius: 150px;
-    -ms-border-radius: 150px;
-    -o-border-radius: 150px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 10rem;
+}
+
+.navi {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5rem;
+    font-size: 6rem;
+    color: #fff;
+    line-height: 7rem;
 }
 
 
@@ -191,11 +196,6 @@ div.col-sm-4 img.profile-avatar {
     max-width: 100%
 }
 
-.navi {
-    text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
-}
-
 .copyright {
     float: right;
     font-size: 2em;
@@ -208,9 +208,11 @@ div.col-sm-4 img.profile-avatar {
 @media (min-width: 1024px) {
     .fixed-condition {
         position: fixed;
-        max-width: 255px;
+        min-width: 255px;
         height: 100vh;
-        background-color: black;
+        background-color: #323232;
+        width: 30%;
+        padding: 25px;
     }
 }
 
