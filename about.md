@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+description: Find out more about me.
 permalink: /about/
 ---
 

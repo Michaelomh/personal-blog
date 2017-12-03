@@ -1,7 +1,6 @@
 ---
 layout: project
 title: Projects
+description: Showcase of some of my projects
 permalink: /projects/
 ---
-
-Few of my projects. Currently doing more in backend, focused in Python and Django.
