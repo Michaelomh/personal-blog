@@ -9,9 +9,7 @@ body {
 hr {
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid #F7F1F1;
-    border-bottom: 1px solid #fff;
+    border: 1px solid #F7F1F1;
 }
 
 span.time,
@@ -21,31 +19,40 @@ span.categories {
     font-size: 11px;
 }
 
-a,
-a:link,
-a:active {
+a {
     text-decoration: none;
-    color: #000;
+}
+
+a:active {
+    text-decoration: underline;
 }
 
 a:hover {
-    color: #B3B3B3;
-    text-decoration: underline;
+    color: #f99b27;
+    text-decoration: none;
 }
 
 
 /* Page Layout */
 
 .post-header {
+    padding-bottom: 25px;
+    width: 100%;
     text-align: center;
 }
 
 .post-title {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1rem;
+    margin-bottom: 0px;
+    margin-top: 4rem;
+}
+
+.post-desc {
+    font-size: 2rem;
 }
 
 
@@ -53,6 +60,7 @@ a:hover {
 
 .main-layout {
     background: #fff;
+    padding-right: 5rem;
 }
 
 .sidebar-nav {
@@ -194,8 +202,9 @@ div.col-sm-4 img.profile-avatar {
 
 .copyright {
     float: right;
-    font-size: 1.8em;
+    font-size: 1.5em;
     line-height: 1.5;
+    margin-right: 1.2rem;
 }
 
 .fixed-condition {
@@ -221,7 +230,8 @@ div.col-sm-4 img.profile-avatar {
     .sidebar-nav {
         position: initial;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 25px;
+        margin-bottom: 15px;
     }
     .social ul {
         text-align: center;
@@ -237,6 +247,10 @@ div.col-sm-4 img.profile-avatar {
         font-size: 3rem;
         letter-spacing: 2px;
         color: #fff;
+    }
+    .main-layout {
+        background: #fff;
+        padding: 0px 25px;
     }
     .navi {
         text-transform: uppercase;

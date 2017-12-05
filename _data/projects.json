@@ -1,15 +1,16 @@
 [
 	{
-		"name": "Cool project 1",
+		"slug": "cool-project",
+        "name": "Cool project 1",
 		"image": "placeholder.jpg",
-		"url": "https://www.google.com",
+		"url": "#",
 		"date": "Jan 2014",
 		"tags": ["Data Science","Data Analytics"]
 	},
 	{
 		"name": "Cool project 2",
 		"image": "placeholder.jpg",
-		"url": "#",
+		"url": "http://www.google.com",
 		"date": "May 2014",
 		"tags": ["Data Science","Data Engineering"]
 	},
