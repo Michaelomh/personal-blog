@@ -38,10 +38,26 @@ input#js-search__input {
 .search__result-date {
     color: #BBB;
     position: absolute;
-    right: 12px;
+    right: 5rem;
 }
 
 .search.is-active {
     opacity: 1;
     visibility: visible;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+.search__result-date {
+    color: #BBB;
+    position: absolute;
+    right: 3rem;
+}
+}
+
+@media (max-width: 767px) {
+.search__result-date {
+    color: #BBB;
+    position: absolute;
+    right: 1rem;
+}
 }

@@ -2,36 +2,47 @@
 layout: default
 ---
 <article class="post">
-  <div class="post-content">
+    <div class="post-content">
     {{ content }}
 
-    {% assign p_array = "" | split:"|" %} {% for project in site.project %} {% capture p_slug %}{{ project.url | split:"/" | last }},{{ project.url }}{% endcapture %} {% assign p_slug_arr = p_slug | split:"," %} {% assign p_array = p_array | push: p_slug_arr %} {% endfor %}
+    {% assign p_array = "" | split:"|" %}
+        {% for project in site.project %} 
+          {% capture p_slug %}{{ project.url | split:"/" | last }},{{ project.url }}{% endcapture %} 
+          {% assign p_slug_arr = p_slug | split:"," %}
+          {% assign p_array = p_array | push: p_slug_arr %}
+        {% endfor %}
 
-    <div class="projects">
-    {% include project_tags.html %}
-      
-    {% for i in site.data.projects %}
-    {% assign p_url = nil %} {% for pr in p_array %} {% if pr contains i.slug %} {% assign p_url = pr[1] %} {% endif %} {% endfor %} {% if p_url == nil %}{% assign p_url = i.url %}{% endif %}
-          
-      <div class="project-item project-outer" data-tags='{{ i.tags | jsonify | downcase }}'>
-        {% if p_url %}<a class="project-detail" href="{{ p_url }}">{% endif %}
-        <div class="project-inner">
-            <div class="project-img bordered" style="background-image: url('/static/projects/{{ i.image }}');"></div>
-            <h3 class="project-headlines">{{ i.name }}</h3>
-            <span class="project-timeline">{{ i.date }}</span>
-            <div class="tag-holder">
-              {% if i.tags %}
-                {% for j in i.tags %}
-                <span> {{ j }} </span>
-                  <span class="tags tag-filter" data-tag="{{ j | downcase }}"><a href="#{{ j }}">{{ j }}</a></span>
-                {% endfor %}
-              {% endif %}
+        <div class="projects">
+        {% include project_tags.html %}
+
+        {% for i in site.data.projects %}
+        {% assign p_url = nil %}
+            {% for pr in p_array %} 
+                {% if pr contains i.slug %} {% assign p_url = pr[1] %} {% endif %}
+            {% endfor %}
+
+        {% if p_url == nil %}{% assign p_url = i.url %}{% endif %}
+
+            <div class="project-item project-outer" data-tags='{{ i.tags | jsonify | downcase }}'>
+                <a class="project-detail" href="{{ p_url }}">
+                    <div class="project-inner">
+                        <div class="project-img img-responsive" style="background-image: url('/static/projects/{{ i.image }}');">
+                            <span class="project-timeline" style="">{{ i.date }}</span>
+                            <span class="project-headlines" style="">{{ i.name }}</span>
+                        </div>
+                    </div>
+                </a>
+<!--
+                <div class="project-content">
+                    <div class="tag-holder">
+                        {% for j in i.tags %}
+                          <span class="tags tag-filter" data-tag="{{ j | downcase }}"><a href="#{{ j }}">{{ j }}</a></span>
+                        {% endfor %}
+                    </div>
+                </div>
+-->
             </div>
+          {% endfor %}
         </div>
-        {% if p_url %}</a>{% endif %}
-        <hr>
-      </div>
-      {% endfor %}
     </div>
-  </div>
 </article>

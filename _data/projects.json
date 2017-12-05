@@ -1,7 +1,7 @@
 [
 	{
 		"slug": "cool-project",
-        "name": "Cool project 1",
+        "name": "Cool project 1 Cool project 1 Cool project 1 Cool project 1",
 		"image": "placeholder.jpg",
 		"url": "#",
 		"date": "Jan 2014",
@@ -18,7 +18,7 @@
 		"name": "Cool project 3",
 		"image": "placeholder.jpg",
 		"url": "#",
-		"date": "June 2014",
+		"date": "Jun 2014",
 		"tags": ["Data Engineering","Development"]
 	},
 	{

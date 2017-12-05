@@ -6,7 +6,6 @@
 			$('span.tag-filter').removeClass("active");
 			$this.addClass("active");
 
-
 			$('.tag-group').children().each(function(){
 				if( $(this).data('tag') ==  $this.data('tag')){
 					$(this).addClass("active");
