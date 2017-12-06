@@ -20,6 +20,14 @@ input#js-search__input {
     transition: 0.2s ease;
 }
 
+.search__results li a { 
+    color: #333;
+}
+
+.search__results li a:hover { 
+    color: #f99b27;
+}
+
 .search__results.is-hidden {
     opacity: 0;
     transform: translateY(-1vh);
@@ -47,17 +55,17 @@ input#js-search__input {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-.search__result-date {
-    color: #BBB;
-    position: absolute;
-    right: 3rem;
-}
+    .search__result-date {
+        color: #BBB;
+        position: absolute;
+        right: 3rem;
+    }
 }
 
 @media (max-width: 767px) {
-.search__result-date {
-    color: #BBB;
-    position: absolute;
-    right: 1rem;
-}
+    .search__result-date {
+        color: #BBB;
+        position: absolute;
+        right: 1rem;
+    }
 }

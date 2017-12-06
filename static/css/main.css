@@ -12,11 +12,32 @@ hr {
     border: 1px solid #F7F1F1;
 }
 
-span.time,
-span.categories {
-    color: #ADADAD;
+post-details {
+    width: 100%;
+}
+
+span.time {
+    font-style: italic;
     margin-bottom: 5px;
-    font-size: 11px;
+    font-size: 2rem;
+    float: right;
+    margin-right: 1rem;
+}
+
+span.categories {
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+span.categories a {
+    border-bottom: 1px dotted #428bca;
+    font-weight: normal;
+}
+
+span.categories a:hover {
+    border-bottom: 1px dotted #f99b27;
 }
 
 a {
@@ -31,7 +52,6 @@ a:hover {
     color: #f99b27;
     text-decoration: none;
 }
-
 
 /* Page Layout */
 
@@ -61,6 +81,7 @@ a:hover {
 .top-layout {
     background: #fff;
     padding-right: 5rem;
+    margin-bottom: 7rem;
 }
 
 .sidebar-nav {
@@ -69,13 +90,13 @@ a:hover {
     position: absolute;
     bottom: 0px;
     padding-bottom: 25px;
+    width: 90%;
 }
 
 .sidebar-nav li {
     margin: 0;
     list-style: none;
 }
-
 
 /* Content */
 
@@ -122,9 +143,14 @@ div.col-sm-4 img.profile-avatar {
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.5rem;
-    font-size: 6rem;
+    font-size: 5em;
     color: #fff;
-    line-height: 7rem;
+    line-height: 8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: block;
 }
 
 .navi-active {
@@ -240,6 +266,7 @@ div.col-sm-4 img.profile-avatar {
         text-align: center;
         margin-top: 25px;
         margin-bottom: 15px;
+        width: 100%;
     }
     .social ul {
         text-align: center;
@@ -260,15 +287,18 @@ div.col-sm-4 img.profile-avatar {
     .top-layout {
         background: #fff;
         padding: 0px 25px;
+        margin-bottom: 0rem;
     }
     .navi {
         text-transform: uppercase;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 0.5rem;
-        font-size: 3rem;
+        font-size: 2.8rem;
+        ;
         color: #fff;
         line-height: 4rem;
         float: left;
+        width: initial;
         margin-right: 2rem;
     }
     div.col-sm-4 {
@@ -287,6 +317,9 @@ div.col-sm-4 img.profile-avatar {
 }
 
 @media (max-width: 767px) {
+    .post {
+        margin: 0px 1rem;
+    }
     .post-title {
         font-size: 3rem;
         letter-spacing: 0.5rem;
@@ -308,6 +341,7 @@ div.col-sm-4 img.profile-avatar {
     .top-layout {
         padding-right: 0rem;
         padding-left: 0.5rem;
+        margin-bottom: 0rem;
     }
     .social ul {
         text-align: center;
@@ -335,6 +369,7 @@ div.col-sm-4 img.profile-avatar {
         position: initial;
         text-align: center;
         margin-top: 20px;
+        width: 100%;
     }
     .navi {
         text-transform: uppercase;
@@ -350,5 +385,13 @@ div.col-sm-4 img.profile-avatar {
         margin-bottom: 1rem;
         position: initial;
         width: 100%;
+    }
+    .post-details {
+        text-align: center;
+    }
+    span.time {
+        float: none;
+        margin-right: 10rem;
+        margin-left: 10rem;
     }
 }
