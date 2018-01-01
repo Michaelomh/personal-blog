@@ -14,24 +14,24 @@ collections:
     permalink: /project/:path/
 
 social:
-    - icon: fa-linkedin
+    - icon: fa-linkedin-square
       link: "https://www.linkedin.com/in/michaelomh/"
-    - icon: fa-github
+    - icon: fa-github-alt
       link: "https://github.com/Michaelomh"
-    - icon: fa-behance-square
-      link: "https://www.behance.net/MichaelOMH"
+    - icon: fa-bar-chart
+      link: "https://public.tableau.com/profile/ong.ming.hao#!/"
     - icon: fa-envelope
-      link: "https://www.behance.net/MichaelOMH"
+      link: "mailto:minghao.ong.2014@sis.smu.edu.sg?Subject=Hello"
 
 urls:
-    - text: Search
-      url: /search/
     - text: About
       url: /about/
-    - text: Projects
-      url: /projects/
     - text: Blog
       url: /blog/
+    - text: Projects
+      url: /projects/
+    - text: Search
+      url: /search/
 
 url: "www.datayse.com"
 baseurl: ""

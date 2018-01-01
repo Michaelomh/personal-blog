@@ -6,5 +6,21 @@
 		"url": "#",
 		"date": "Jan 2014",
 		"tags": ["Data Science","Data Analytics"]
-	}
+	}, 
+    {
+		"slug": "cool-project2",
+        "name": "Cool project 2",
+		"image": "placeholder.jpg",
+		"url": "#",
+		"date": "Jan 2017",
+		"tags": ["Data Engineering","Data Analytics"]
+	}, 
+    {
+		"slug": "cool-project3",
+        "name": "Cool project 3",
+		"image": "placeholder.jpg",
+		"url": "#",
+		"date": "Jan 2018",
+		"tags": ["Data Science","Data Cleaning"]
+	}    
 ]

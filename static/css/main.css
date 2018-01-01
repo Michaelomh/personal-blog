@@ -41,15 +41,19 @@ span.categories a:hover {
 }
 
 a {
+    color: #f99b27;
     text-decoration: none;
 }
 
+/*
 a:active {
     text-decoration: underline;
 }
+*/
 
 a:hover {
-    color: #f99b27;
+    color: #f17157;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -97,6 +101,10 @@ a:hover {
 .sidebar-nav li {
     margin: 0;
     list-style: none;
+}
+
+.sidebar-nav li a:hover {
+    color: #f99b27 !important;
 }
 
 
@@ -299,14 +307,78 @@ div.col-sm-4 img.profile-avatar {
 
 .home-container {
     position: relative;
-    top: 41%;
+    top: 11%;
     text-align: center;
 }
 
-.home-container span {
+.home-img {
+    width: 33%;
+    margin: 0px auto;
+}
+
+.home-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    line-height: 6rem;
+}
+
+.home-title-2 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    line-height: 3rem;
+}
+
+
+/* About page CSS */
+
+.about-title {
     font-size: 3rem;
     font-weight: bold;
-    line-height: 1.3;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-top: 0px;
+}
+
+.about-profile {
+    text-align: center;
+}
+
+.about-profile-img {
+    width: 66%;
+    margin: 0px auto;
+}
+
+.about-profile-title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #666;
+}
+
+.about-profile-title:hover {
+    color: #e08d2a;
+}
+
+.btn {
+    background-color: transparent;
+    border: 2px solid #e08d2a;
+    padding: 0.8rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #e08d2a;
+}
+
+.btn:hover {
+    color: #f37157;
+    border-color: #f37157;
+}
+
+.btn:active {
+    color: #f37157;
+    border-color: #f37157;
+    box-shadow: none;
 }
 
 
