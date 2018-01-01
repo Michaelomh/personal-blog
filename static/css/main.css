@@ -45,15 +45,8 @@ a {
     text-decoration: none;
 }
 
-/*
-a:active {
-    text-decoration: underline;
-}
-*/
-
 a:hover {
     color: #f17157;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -86,7 +79,7 @@ a:hover {
 .top-layout {
     background: #fff;
     padding-right: 5rem;
-    margin-bottom: 7rem;
+    margin-bottom: 10rem;
 }
 
 .sidebar-nav {
@@ -379,6 +372,39 @@ div.col-sm-4 img.profile-avatar {
     color: #f37157;
     border-color: #f37157;
     box-shadow: none;
+}
+
+.skill-tree {
+    padding: 0px 5rem;
+}
+
+
+.progress {
+    position: relative;
+    height: 28px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    background-color: #e08d2a;
+}
+
+.progress .progress-type {
+    position: absolute;
+    left: 0px;
+    padding: 3px 30px 2px 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(25, 25, 25, 0.2);
+    width: 33%;
+    text-align: left;
+}
+
+.progress .progress-completed {
+    position: absolute;
+    right: 0px;
+    padding: 3px 10px 2px;
+    font-weight: bold;
 }
 
 
