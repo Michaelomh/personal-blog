@@ -351,6 +351,8 @@ div.col-sm-4 img.profile-avatar {
 .about-text {
     font-size: 2rem;
     line-height: 1.8;
+    text-align: justify;
+    display: block;
 }
 
 .btn {
@@ -368,22 +370,16 @@ div.col-sm-4 img.profile-avatar {
     border-color: #e08d2a;
 }
 
-
-/*
-.btn:active {
-    color: #e08d2a;
-    border-color: #e08d2a;
-    box-shadow: none;
-}
-*/
-
 .btn-active {
-    color: #e08d2a;
+    color: #e08d2a !important;
     border: 3px solid #e08d2a;
 }
 
 .skill-tree {
     padding: 0px 5rem;
+    float: left;
+    width: 100%;
+    margin-bottom: 3rem;
 }
 
 .progress {
@@ -400,7 +396,7 @@ div.col-sm-4 img.profile-avatar {
 .progress .progress-type {
     position: absolute;
     left: 0px;
-    padding: 3px 30px 2px 20px;
+    padding: 3px 0px 2px 20px;
     color: rgb(255, 255, 255);
     background-color: rgba(25, 25, 25, 0.2);
     width: 33%;
@@ -483,6 +479,9 @@ div.col-sm-4 img.profile-avatar {
         padding-top: 2rem;
         padding-bottom: 1rem;
         width: 100%;
+    }
+    .about-profile {
+        margin-bottom: 12rem;
     }
 }
 
@@ -578,5 +577,34 @@ div.col-sm-4 img.profile-avatar {
     }
     .post-header {
         margin-top: 2rem !important;
+    }
+    .about-skills .col-xs-12 .col-xs-4 {
+        text-align: center !important;
+        width: 100%;
+        margin: 8px 0px;
+    }
+    .skill-tree {
+        padding: 0px;
+    }
+    .progress-type {
+        padding-left: 10px !important;
+        width: 50% !important;
+    }
+    .about-text {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+    .about-skills {
+        float: left;
+        margin-bottom: 3rem;
+    }
+    .about-profile {
+        float: left;
+        margin-bottom: 3rem;
+    }
+    .about-profile .col-sm-3 {
+        width: 50%;
+        float: left;
+        padding: 8px;
     }
 }
