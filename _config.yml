@@ -33,6 +33,7 @@ urls:
     - text: Search
       url: /search/
 
+post_img_url: "http://www.datayse.com/static/img/_posts/"
 url: "www.datayse.com"
 baseurl: ""
 paginate: 10

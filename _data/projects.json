@@ -1,26 +1,50 @@
 [
 	{
-		"slug": "cool-project",
-        "name": "Cool project 1",
-		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "Jan 2014",
-		"tags": ["Data Science","Data Analytics"]
+		"slug": "",
+        "name": "datayse.com",
+		"image": "Datayse_Project.jpg",
+		"url": "http://www.datayse.com",
+		"date": "Jan 2018",
+		"tags": ["Development"]
 	}, 
     {
-		"slug": "cool-project2",
-        "name": "Cool project 2",
-		"image": "placeholder.jpg",
+		"slug": "SMUBIA-LiveAnalytics",
+        "name": "SMUBIA Live Analytics Dashboard",
+		"image": "VA-SMUBIA.jpg",
 		"url": "#",
-		"date": "Jan 2017",
-		"tags": ["Data Engineering","Data Analytics"]
+		"date": "Aug 2017",
+		"tags": ["Data Analytics", "Development"]
 	}, 
     {
-		"slug": "cool-project3",
-        "name": "Cool project 3",
-		"image": "placeholder.jpg",
+		"slug": "IoT-shoppingcart",
+        "name": "Using IoT on Shopping Carts",
+		"image": "iot-project.jpg",
 		"url": "#",
 		"date": "Jan 2018",
-		"tags": ["Data Science","Data Cleaning"]
+		"tags": ["Data Analytics", "Development"]
+	}, 
+    {
+		"slug": "SA-instagram",
+        "name": "Social Media Strategies in Instagram",
+		"image": "social-analytics-project.jpg",
+		"url": "#",
+		"date": "Jan 2018",
+		"tags": ["Data Science", "Data Analytics"]
+	}, 
+    {
+		"slug": "VA-flights",
+        "name": "Analyzing Passengers US Domestic Flights in 2015",
+		"image": "VA_project.jpg",
+		"url": "#",
+		"date": "Jan 2018",
+		"tags": ["Data Analytics", "Development"]
+	}, 
+    {
+		"slug": "DS-forecast",
+        "name": "Forecasting and detecting elderly inactiveness",
+		"image": "TimeSeries-Forecasting.jpg",
+		"url": "#",
+		"date": "Jan 2018",
+		"tags": ["Data Science"]
 	}    
 ]

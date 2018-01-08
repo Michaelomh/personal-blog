@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "get Month Name [CF]"
-date:   2017-06-11 03:43:45 +0700
-categories: [project_reflections]
+title:  "[Project] SMUBIA Live Analytics Dashboard"
+date:   2018-01-08
+categories: [my_projects]
 ---
 
 Map the given integer to a month.
