@@ -8,19 +8,19 @@
 		"tags": ["Development"]
 	}, 
     {
-		"slug": "SMUBIA-LiveAnalytics",
+		"slug": "",
         "name": "SMUBIA Live Analytics Dashboard",
 		"image": "VA-SMUBIA.jpg",
-		"url": "#",
+		"url": "../my_projects/2017/08/12/SMUBIA-Live-Analytics-Dashboard.html",
 		"date": "Aug 2017",
 		"tags": ["Data Analytics", "Development"]
 	}, 
     {
-		"slug": "IoT-shoppingcart",
-        "name": "Using IoT on Shopping Carts",
+		"slug": "",
+        "name": "IoT Shopping Cart Misuse Dashboard",
 		"image": "iot-project.jpg",
-		"url": "#",
-		"date": "Jan 2018",
+		"url": "../my_projects/2017/04/10/IOT-shoppingcart-Dashboard.html",
+		"date": "Apr 2017 ",
 		"tags": ["Data Analytics", "Development"]
 	}, 
     {

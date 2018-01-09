@@ -8,7 +8,22 @@ permalink: /search/
 
 <link rel="stylesheet" href="/static/css/super-search.css">
 
+<h1 style="text-align: center; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px;margin: 0px 5px 10px;">By Category</h1>
+<div class="post-category" style="margin-bottom: 3rem;">
+  {% for category in site.categories %}
+    {% capture category_slug %}{{ category | first }}{% endcapture %}
+    {% for c_slug in category_slug %}
+      {% if c_slug == page.categories %}
+        <button class="btn-category btn-active">{{ c_slug }}</button>
+      {% else %}
+        <a href="/category/{{ c_slug }}" class="btn-category">{{ c_slug }}</a>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</div>
+<hr>
 <div class="search" id="js-search">
+    <h1 style="text-align: center; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px;margin: 0px 5px 10px;">By Keywords</h1>
     <input type="text" placeholder="Search for keywords in my blog" class="search__input form-control" id="js-search__input">
     <ul class="search__results" id="js-search__results"></ul>
 </div>
