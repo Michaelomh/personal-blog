@@ -27,7 +27,7 @@
 		"slug": "SA-instagram",
         "name": "Social Media Strategies in Instagram",
 		"image": "social-analytics-project.jpg",
-		"url": "#",
+		"url": "../my_projects/2017/11/15/SA-Social-Analytics.html",
 		"date": "Jan 2018",
 		"tags": ["Data Science", "Data Analytics"]
 	}, 
@@ -43,8 +43,8 @@
 		"slug": "DS-forecast",
         "name": "Forecasting and detecting elderly inactiveness",
 		"image": "TimeSeries-Forecasting.jpg",
-		"url": "#",
+		"url": "../my_projects/2017/04/27/DWBA-predicting-elderly-inactiveness.html",
 		"date": "Jan 2018",
-		"tags": ["Data Science"]
+		"tags": ["Data Science", "Data Engineering", "Data Analytics"]
 	}    
 ]
