@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  "[Project] Forecasting and detecting elderly inactiveness"
+title:  "[Project] Forecasting and detecting elderly bathroom activity"
 date:   2017-04-27
 categories: [my_projects]
 ---
 
 # Overview #
 --- 
-**Description**: 
+**Description**: We conducted time series forecasting using ARIMA models to forecast and detect the elderly bathroom activity. For the storage of the data, we are using data warehousing and star schema (Microsoft SQL Server). For the machine learning portion, we used Microsoft Azure Maching Learning to forecast the elderly bathroom activities. 
 
-**Abstract Poster Link:** 
+**Abstract Poster Link:** [Abstract Poster Link](https://drive.google.com/file/d/1OsNDlnhO6mRW1oL9ThhNAJqYfxQtfEKM/view?usp=sharing)
 
-**Full Report Link:** 
+**Full Report Link:** [Full Report Link](https://drive.google.com/file/d/1eCjZLnqQ7-hXYZdbg0uK4hbJjCWpPReF/view?usp=sharing)
 
 **Tools Used:** Python, Microsoft Azure Machine Learning, Tableau, JMP, Microsoft Data Server (Data Warehouse), SAS Enterprise
 
@@ -29,12 +29,12 @@ Some of the other business questions the project intends to analyze is:
 ---
 For the dataset, we are given data from SMU-TCS iCity of the motion sensors detected in an elderly home. Below shows an example of how the motion senses are distributed in the house. Due to confidentialy issues, we are not able to disclose any data.
 
-<img class="img-responsive" src="http://www.datayse.com/static/img/blogpost/2017-04-27-DWBA-img1.png" alt="Motion Sensor sample distribution" style="margin:0px auto;width:600px;"/>
+<img class="img-responsive" src="http://www.datayse.com/static/img/blogpost/2017-04-27-DWBA-img1.png" alt="Motion Sensor sample distribution" style="margin:0px auto;width:300px;"/>
 <center>Motion Sensor sample distribution</center><br>
 
 For the data, we are using a star schema for the data warehouse using Microsoft SQL Server. As for a very large dataset, a star schema is optimized for a very large dataset and the performance of the general queries is much faster. 
 
-<img class="img-responsive" src="http://www.datayse.com/static/img/blogpost/2017-04-27-DWBA-img2.png" alt="Star Schema for Data Warehouse" style="margin:0px auto;width:600px;"/>
+<img class="img-responsive" src="http://www.datayse.com/static/img/blogpost/2017-04-27-DWBA-img2.png" alt="Star Schema for Data Warehouse" style="margin:0px auto;width:500px;"/>
 <center>Star Schema for Data Warehouse</center><br>
 
 For the ETL Process, we used Microsoft SQL Server and Python. First, we would extract the data in the Microsoft SQL Server, and the transforming would be done using Python scripts as they are very flexible and you can wrangle the data accordingly.
@@ -63,7 +63,7 @@ In addition to detecting stationarity in the dataset, we would want to further d
 
 After performing the Dickey Fuller Test on all the subjects at the 95% significance level, we obtained p-values which were lower than 0.05 required, therefore the null hypothesis is rejected and it is concluded that their bathroom activity data follows a stationary trend. In many cases, the p-values were extremely small, as show in the figure below.
 
-<img class="img-responsive" src="http://www.datayse.com/static/img/blogpost/2017-04-27-DWBA-img4.png" alt="Dickey Fuller Test Results from Python" style="margin:0px auto;width:600px;"/>
+<img class="img-responsive" src="http://www.datayse.com/static/img/blogpost/2017-04-27-DWBA-img4.png" alt="Dickey Fuller Test Results from Python" style="margin:0px auto;width:300px;"/>
 <center>Dickey Fuller Test Results from Python</center><br>
 
 For an ARIMA prediction model to be evaluated, there are 2 ways in which this can be done. Namely Akaike Informaiton Criterion (AIC) and Bayesian Information Criterion (BIC). The lower the AIC and BIC a model has in comparison with other models, the better the model is. This is also used to aid us in determining the best ARIMA model to use for each individual elderly on their bathroom usage habits
