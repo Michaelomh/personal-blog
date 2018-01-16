@@ -12,6 +12,20 @@ hr {
     border: 1px solid #F7F1F1;
 }
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 2px solid #000000;
+}
+
+th {
+    border: 2px solid #000000;
+}
+
+td {
+    border: 1px solid #000000;
+}
+
 .post-details {
     width: 100%;
 }
@@ -265,7 +279,6 @@ div.col-sm-4 img.profile-avatar {
     line-height: 1.42857143;
     border-radius: 4px;
 }
-
 
 .btn-category:hover {
     color: #f99b27;

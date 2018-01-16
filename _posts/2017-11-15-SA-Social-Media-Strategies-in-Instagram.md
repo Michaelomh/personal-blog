@@ -11,15 +11,15 @@ categories: [my_projects]
 
 **Full Report Link:** [Full Report](https://drive.google.com/file/d/100waJQwHcEtZ0qYykF4orMUu-cycAY-L/view?usp=sharing)
 
-** Final Presentation Link**: [Final Presentation](https://drive.google.com/file/d/1xGARhpco0xE-JHUjb93cECOdGET9T5RR/view?usp=sharing)
+**Final Presentation Link**: [Final Presentation](https://drive.google.com/file/d/1xGARhpco0xE-JHUjb93cECOdGET9T5RR/view?usp=sharing)
 
 **Tools Used:** Python, Tableau, py-tesseract
 
 **Results:** We implemented the social media strategies that we have identified from data analytics to our sponsor's Instagram account. Compared his previous 7 post (before implementation) and his latest 7 post (after implementation), it has result in the following:
-- Average Likes Per Post - **2443 vs 1766 average likes per post (38.3% increase in average likes per post)**
-- Total Comments - **388 vs 303 comments in 7 posts (28.1% increase in total comments)**
-- Increase in Followers in 9 days period - **659 vs. 422 increase in followers (56.2% increase in increase of followers)**
-- We have a post which received the highest number of likes **(3189 likes, previously highest was 3052 likes)**
+- **Average Likes Per Post** - 2443 vs 1766 average likes per post (38.3% increase in average likes per post)
+- **Total Comments** - 388 vs 303 comments in 7 posts (28.1% increase in total comments)
+- **Increase in Followers in 9 days period** - 659 vs. 422 increase in followers (56.2% increase in increase of followers)
+- **Highest number of likes for one post** - 3189 likes, previously highest was 3052 likes
 
 **Learning Points:** Web scraping (BeautifulSoup4), NLTK, sentiment analysis and sentiment analysis of Emojis.
 
@@ -27,7 +27,7 @@ categories: [my_projects]
 ---
 Timothy Joshua Chia is a writer based in Singapore. He focuses mainly on writing poems (and some short stories as well) and showcases these writings through social media platforms (mainly Instagram and Facebook). The goal is to increase his reach and to get a larger audience of followers. The higher the number of followers, the more outreach and popular one is. His instagram tag is [@timoteijosh](https://www.instagram.com/timoteijosh)
 
-<img class="img-responsive" src="http://www.datayse.com/static/img/blogpost/2017-11-15-SA-img-1.png" alt="Sample of Timothy's Instagram Page" style="margin:0px auto;width:600px;"/>
+<img class="img-responsive" src="http://www.datayse.com/static/img/blogpost/2017-11-15-SA-img-1.png" alt="Sample of Timothy's Instagram Page" style="margin:0px auto;width:500px;"/>
 <center><b>Sample of Timothy's Instagram Page</b></center><br>
 
 The approach to this social media campaign is to do the following:
@@ -63,16 +63,18 @@ The data that we would be interested in getting is as follows:
 | comment | the comment contents      |
 | datestamp | the datetimestamp of the comment      |
 
+
+<br>
 Web scraping is done via a couple of python scripts. Firstly, we created a Python script to loop through the Instagram URL’s of the 6 accounts. In this script, we get the individual post URLs. For each account, we have extracted out about 3 to 4 months worth of posts (roughly from end June to mid October).
 
 After extracting the URL of each individual post, we then used another Python script to loop through these URLs and extract the data we need. This data would then be stored in a csv format, with an encoding of UTF-8 so that emojis can be properly stored.
 
-<img class="img-responsive" src="http://www.datayse.com/static/img/blogpost/2017-11-15-SA-img-2.png" alt="Overview of Web Scraping" style="margin:0px auto;width:600px;"/>
+<img class="img-responsive" src="http://www.datayse.com/static/img/blogpost/2017-11-15-SA-img-2.png" alt="Overview of Web Scraping" style="margin:0px auto;width:500px;"/>
 <center><b>Overview of Web Scraping</b></center><br>
 
 In addition to web scraping, we used Google's Py-tesseract to obtain the text in the poetry posted by the various Instagram accounts. Using Py-tesseract, we were able to get >90% accuracy. Below is an example of the accuracy of the OCR employed. 
 
-<img class="img-responsive" src="http://www.datayse.com/static/img/blogpost/2017-11-15-SA-img-3.png" alt="Output from Py-tesseract" style="margin:0px auto;width:600px;"/>
+<img class="img-responsive" src="http://www.datayse.com/static/img/blogpost/2017-11-15-SA-img-3.png" alt="Output from Py-tesseract" style="margin:0px auto;width:500px;"/>
 <center><b>Output from Py-tesseract</b></center><br>
 
 
