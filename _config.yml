@@ -32,8 +32,6 @@ urls:
       url: /projects/
     - text: Search
       url: /search/
-    - text: Temp
-      url: /temp/
 
 post_img_url: "http://www.datayse.com/static/img/_posts/"
 url: "www.datayse.com"
