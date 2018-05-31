@@ -1,0 +1,73 @@
+/*
+Starting
+*/
+
+.Title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    height: 15vh;
+    font-size: 2em;
+}
+
+.large-Bar {
+    font-family: 'Open Sans', sans-serif;
+    height: 25vh;
+}
+
+.Bar {
+    font-family: 'Open Sans', sans-serif;
+    height: 15vh;
+}
+
+.Navi {
+    font-family: 'Open Sans', sans-serif;
+    height: 15vh;
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navi-left {
+    background-color: lightgray;
+}
+
+.navi-right {
+    background-color: green;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.container-fluid {
+    height: 100vh;
+}
+
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.card {
+    display: inline-block;
+}
+
+.card {
+  border: 1px solid white;
+  width: 150px;
+  height: 75px;
+  background: black;
+}
+
+.scrolling-wrapper {
+  width: 100%;
+}
+
+-webkit-overflow-scrolling: touch;
+
+&::-webkit-scrollbar {
+display: none;
+}

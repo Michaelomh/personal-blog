@@ -1,27 +1,81 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>title</title>
-    <link rel="stylesheet" href="static/css/pf.css" type="text/css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Personal Finance App</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/pf.css" type="text/css">
 </head>
+
 <body>
-    <div style="background-color:#78e08f">Add</div>
-    <div>Category</div>
-    <div>Amount</div>
-    <div>Date</div>
-    <div>Name</div>
-    <div>Other Comments</div>
-    <div>Submit + Templates</div>
+    <div class="containter-fluid">
+        <div class="Title row">
+            <div class="col-sm-12">
+                TITLE
+                <i class="far fa-th-list"></i>
+            </div>
+        </div>
+        <div class="large-Bar row">
+            <div class="col-sm-12">
+                <div class="scrolling-wrapper">
+                    <div class="card"><h2>Card</h2></div>
+                    <div class="card"><h2>Card</h2></div>
+                    <div class="card"><h2>Card</h2></div>
+                    <div class="card"><h2>Card</h2></div>
+                    <div class="card"><h2>Card</h2></div>
+                    <div class="card"><h2>Card</h2></div>
+                    <div class="card"><h2>Card</h2></div>
+                    <div class="card"><h2>Card</h2></div>
+                    <div class="card"><h2>Card</h2></div>
+                  </div>
+            </div>
+        </div>
+        <div class="Bar row">
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="cost" placeholder="Cost">
+            </div>
+        </div>
+        <div class="Bar row">
+            <div class="col-sm-12">
+                <!--3 dates
+                    1. date chosen
+                    2. choose yesterday
+                    3. choose any date
+                -->
+                <input type="date" class="form-control" id="date" placeholder="date">
+            </div>
+        </div>
+        <div class="Bar row">
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="name" placeholder="Item">
+            </div>
+        </div>
+        <div class="Navi row">
+            <div class="col-6 navi-left">
+                <i class="fal fa-book"></i> Template
+                
+            </div>
+            <div class="col-6 navi-right">
+                <i class="fal fa-plus-square"></i> Submit
+            </div>
+        </div>
+    </div>
+
 
 </body>
 
 <footer>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="static/js/pf.js"></script>
 </footer>
+
 </html>
