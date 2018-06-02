@@ -9,33 +9,24 @@ Starting
     font-size: 2em;
 }
 
-.large-Bar {
-    font-family: 'Open Sans', sans-serif;
-    height: 25vh;
-}
 
-.Bar {
-    font-family: 'Open Sans', sans-serif;
-    height: 15vh;
-}
-
-.Navi {
-    font-family: 'Open Sans', sans-serif;
-    height: 15vh;
+.navi-left {
+    background-color: lightgray;
     font-size: 1.5em;
     text-align: center;
     text-transform: uppercase;
 }
 
-.navi-left {
-    background-color: lightgray;
-}
-
 .navi-right {
     background-color: green;
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .row {
+    font-family: 'Open Sans', sans-serif;
+    height: 12.5vh;
     margin-right: 0px;
     margin-left: 0px;
 }
@@ -51,11 +42,22 @@ Starting
     white-space: nowrap;
 }
 
-.card {
+.category {
     display: inline-block;
+    width: 75px;
+}
+
+.form-control {
+    height:100%;
+    text-align: right;
+    color: #3b3b3b;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
 }
 
 .card {
+    display: inline-block;
     border: 1px solid white;
     width: 150px;
     height: 75px;

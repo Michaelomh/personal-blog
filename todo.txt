@@ -1,5 +1,5 @@
 - HTML, Add select for value, date, (for now),  name
-- HTML add in categories for 7 categories
-- Connect to the Google sheets when press submit
++ HTML add in categories for 7 categories
++ Connect to the Google sheets when press submit
 - Overall Design and aesthetics
 
