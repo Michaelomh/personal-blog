@@ -4,20 +4,20 @@ var categorySelect = "Food"
 $(document).ready(function () {
     //populate date
     var today = new Date()
-    $(".form-date").val(today.getFullYear() + "-" + ('0' + (today.getMonth()+1)).slice(-2) + "-" + ('0' + today.getDate()).slice(-2))
-    
+    $(".form-date").val(today.getFullYear() + "-" + ('0' + (today.getMonth() + 1)).slice(-2) + "-" + ('0' + today.getDate()).slice(-2))
+
     //make all category grey
     categoryReset();
 
-    $(".category-food").css("filter","grayscale(0)");
-    $(".category-food").css("-webkit-filter","grayscale(0)");
-    
+    $(".category-food").css("filter", "grayscale(0)");
+    $(".category-food").css("-webkit-filter", "grayscale(0)");
+
     //retrieveData();
 });
 
-var categoryReset = function() {
-    $(".category").css("filter","grayscale(1)");
-    $(".category").css("-webkit-filter","grayscale(1)");
+var categoryReset = function () {
+    $(".category").css("filter", "grayscale(1)");
+    $(".category").css("-webkit-filter", "grayscale(1)");
 }
 
 var script_url = "https://script.google.com/macros/s/AKfycbxKPtUxtPG5FGt5z_8Lg6AHzPie_g53724OVGuU6ruNl_suGIw/exec";
@@ -27,7 +27,7 @@ var addTransaction = function () {
     var date = $(".form-date").val()
     var cost = $(".form-cost").val()
     var item = $(".form-item").val()
-    
+
     var url = script_url + "?date=" + date + "&cost=" + cost + "&cat=" + window.categorySelect + "&item=" + item + "&action=insert";
     var request = jQuery.ajax({
         crossDomain: true,
@@ -37,10 +37,10 @@ var addTransaction = function () {
     });
 }
 
-var clearTransaction = function() {
+var clearTransaction = function () {
     categorySelect = "Food"
     var today = new Date()
-    $(".form-date").val(today.getFullYear() + "-" + ('0' + (today.getMonth()+1)).slice(-2) + "-" + ('0' + today.getDate()).slice(-2))
+    $(".form-date").val(today.getFullYear() + "-" + ('0' + (today.getMonth() + 1)).slice(-2) + "-" + ('0' + today.getDate()).slice(-2))
     $(".form-cost").val("")
     $(".form-item").val("")
 }
@@ -56,9 +56,38 @@ var retrieveData = function () {
     });
 }
 
-$( ".row .navi-right" ).click(function() {
+
+$(".category").click(function () {
+    categoryReset();
+    $(this).css("filter", "grayscale(0)");
+    $(this).css("-webkit-filter", "grayscale(0)");
+    //console.log(this.id)
+    categorySelect = this.id;
+
+    if (categorySelect == "Income") {
+        styleCost(1);
+    } else {
+        styleCost(0);
+    }
+});
+
+var styleCost = function (categoryparams) {
+    if (categoryparams == 1) {
+        $("#costValue .form-control").css("color", "green");
+        $("#costIndicator").css("color", "green");
+    } else {
+        $("#costValue .form-control").css("color", "red");
+        $("#costIndicator").css("color", "red");
+    }
+}
+
+
+$(".row .navi-right").click(function () {
     console.log("clicked")
     addTransaction();
     clearTransaction();
 });
 
+var resetBars = function() {
+    $(".row").show("slide", { direction: "left" }, 1000);
+};

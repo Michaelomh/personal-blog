@@ -21,31 +21,33 @@
 
 <body>
     <div class="containter-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                TITLE
-                <i class="far fa-th-list"></i>
+        <div class="row title-row">
+            <div class="col-9 title-left">
+                <span class="title">ADD</span>
+            </div>
+            <div class="col-3 title-right">
+                <i class="fas fa-archive fa-2x"></i>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
                 <div class="scrolling-wrapper">
-                    <img class="img-fluid category category-food" src="/static/img/pf/food.png">
-                    <img class="img-fluid category category-shopping" src="/static/img/pf/shopping.png">
-                    <img class="img-fluid category category-trans" src="/static/img/pf/trans.png">
-                    <img class="img-fluid category category-entertain" src="/static/img/pf/enterin.png">
-                    <img class="img-fluid category category-house" src="/static/img/pf/hosuing.png">
-                    <img class="img-fluid category category-others" src="/static/img/pf/others.png">
-                    <img class="img-fluid category category-cash" src="/static/img/pf/csah.png">
+                    <img class="img-fluid category category-food" id="Food-Drinks" src="/static/img/pf/food.png">
+                    <img class="img-fluid category category-shopping" id="Shopping" src="/static/img/pf/shopping.png">
+                    <img class="img-fluid category category-trans" id="Transport" src="/static/img/pf/trans.png">
+                    <img class="img-fluid category category-entertain" id="Entertainment" src="/static/img/pf/enterin.png">
+                    <img class="img-fluid category category-house" id="Housing" src="/static/img/pf/hosuing.png">
+                    <img class="img-fluid category category-others" id="Others" src="/static/img/pf/others.png">
+                    <img class="img-fluid category category-cash" id="Income" src="/static/img/pf/csah.png">
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-3">
+            <div class="col-3" id="costIndicator">
                 +/-
             </div>
-            <div class="col-9">
-                <input type="number" step="any" class="form-control form-cost" id="cost" placeholder="Cost">
+            <div class="col-9" id="costValue">
+                <input type="tel" step="any" class="form-control form-cost" id="cost" placeholder="Cost">
             </div>
         </div>
         <div class="row">
@@ -73,20 +75,19 @@
         </div>
         <div class="row">
             <div class="col-6 navi-left">
-                <i class="fal fa-book"></i> Template
-
+                <i class="fas fa-bolt fa-2x"></i>
             </div>
             <div class="col-6 navi-right">
-                <i class="fal fa-plus-square"></i> Submit
+                <i class="fas fa-plus-circle fa-2x"></i>
             </div>
         </div>
     </div>
-
 
 </body>
 
 <footer>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="/static/js/pf.js"></script>
