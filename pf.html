@@ -29,7 +29,7 @@
                 <i class="fas fa-archive fa-2x"></i>
             </div>
         </div>
-        <div class="row">
+        <div class="row row-add">
             <div class="col-sm-12">
                 <div class="scrolling-wrapper">
                     <img class="img-fluid category category-food" id="Food-Drinks" src="/static/img/pf/food.png">
@@ -42,35 +42,44 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row row-add">
             <div class="col-3" id="costIndicator">
-                +/-
+                <i class="far fa-minus fa-2x" id="cost-minus"></i>
+                <i class="far fa-plus fa-2x" id="cost-plus" style="display:none;"></i>
             </div>
             <div class="col-9" id="costValue">
-                <input type="tel" step="any" class="form-control form-cost" id="cost" placeholder="Cost">
+                <input type="number" step="any" class="form-control form-cost" id="cost" placeholder="Cost">
             </div>
         </div>
-        <div class="row">
-            <div class="col-3">
-                Ystday
+        <div class="row row-add">
+            <div class="col-3 date-yesterday">
+                <i class="fas fa-reply fa-2x"></i>
             </div>
             <div class="col-9">
                 <input type="text" class="form-control form-date" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" placeholder="date">
             </div>
         </div>
-        <div class="row">
+        <div class="row row-add">
             <div class="col-sm-12">
                 <input type="text" class="form-control form-item" id="name" placeholder="Item">
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12">
+        <div class="row row-template" id="template-1">
+            <div class="col-2 template-icon">
+                <i class="fas fa-coffee fa-2x"></i>
+            </div>
+            <div class="col-8 template-text">Toast Box Coffee</div>
+            <div class="col-2 template-cost" style="padding-left:0px;">1.50</div>
+        </div>
+        <div class="row row-transaction">
+            <div class="col-2 transaction-icon">
 
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-
+            <div class="col-8 template-text">
+                Toast Box Coffee
+            </div>
+            <div class="col-2 template-cost" style="padding-left:0px;">
+                1.50
             </div>
         </div>
         <div class="row">
@@ -82,8 +91,8 @@
             </div>
         </div>
     </div>
-
 </body>
+
 
 <footer>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

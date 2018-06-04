@@ -10,18 +10,19 @@ Starting
 }
 
 .title-row {
-    background-color: purple;
+    background-color: #D64545;
+    color: #fff;
 }
 
 .navi-left {
-    background-color: lightgray;
+    background-color: #F17171;
     font-size: 1.5em;
     text-align: center;
     line-height: 4;
 }
 
 .navi-right {
-    background-color: green;
+    background-color: #EE4D4D;
     font-size: 1.5em;
     text-align: center;
     line-height: 4;
@@ -46,6 +47,10 @@ Starting
     margin-left: 0px;
 }
 
+.row-add {
+    border-bottom: 2px solid #D64545;
+}
+
 .container-fluid {
     height: 100vh;
 }
@@ -63,12 +68,32 @@ Starting
 }
 
 .form-control {
-    height: 100%;
+    height: 99%;
     text-align: right;
     color: #3b3b3b;
     font-weight: bold;
-    text-transform: uppercase;
     border: none;
+}
+
+.form-date {
+    font-size: 2em;
+}
+
+.form-item {
+    font-size: 2em;
+}
+
+#costIndicator {
+    color: #D64545;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 4;
+}
+
+.form-cost {
+    color: #D64545;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .card {
@@ -77,6 +102,11 @@ Starting
     width: 150px;
     height: 75px;
     background: black;
+}
+
+.date-yesterday {
+    font-size: 1.2em;
+    line-height: 5;
 }
 
 .scrolling-wrapper {
@@ -89,22 +119,17 @@ Starting
     display: none;
 }
 
-#costIndicator {
-    color: red;
+
+/*
+Template Styles
+*/
+
+.row-template {
+    line-height: 4;
+    font-size: 1.2em;
+    border-bottom: 2px solid #F17171;
 }
 
-#costValue .form-control {
-    color: red;
-}
-
-#costValue .form-control::placeholder {
-    color: red;
-}
-
-#costValue .form-control::-ms-input-placeholder {
-    color: red;
-}
-
-#costValue .form-control:-ms-input-placeholder {
-    color: red;
+.row-template .template-icon {
+    line-height: 5;
 }

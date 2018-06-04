@@ -1,26 +1,27 @@
 //Global variables
 var categorySelect = "Food"
+var script_url = "https://script.google.com/macros/s/AKfycbxKPtUxtPG5FGt5z_8Lg6AHzPie_g53724OVGuU6ruNl_suGIw/exec";
 
 $(document).ready(function () {
     //populate date
     var today = new Date()
     $(".form-date").val(today.getFullYear() + "-" + ('0' + (today.getMonth() + 1)).slice(-2) + "-" + ('0' + today.getDate()).slice(-2))
 
-    //make all category grey
+    //make all category grey except for food-drink category.
     categoryReset();
-
     $(".category-food").css("filter", "grayscale(0)");
     $(".category-food").css("-webkit-filter", "grayscale(0)");
 
     //retrieveData();
 });
 
+//ADD TRANSACTIONS FUNCTION ======================================
+// Contains all functions that belongs in Add transactions 
+//================================================================
 var categoryReset = function () {
     $(".category").css("filter", "grayscale(1)");
     $(".category").css("-webkit-filter", "grayscale(1)");
 }
-
-var script_url = "https://script.google.com/macros/s/AKfycbxKPtUxtPG5FGt5z_8Lg6AHzPie_g53724OVGuU6ruNl_suGIw/exec";
 
 // Make an AJAX call to Google Script
 var addTransaction = function () {
@@ -45,6 +46,44 @@ var clearTransaction = function () {
     $(".form-item").val("")
 }
 
+$(".category").click(function () {
+    categoryReset();
+    $(this).css("filter", "grayscale(0)");
+    $(this).css("-webkit-filter", "grayscale(0)");
+    //console.log(this.id)
+    categorySelect = this.id;
+
+    if (categorySelect == "Income") {
+        $("#costValue .form-control").css("color", "#7DB545");
+        $("#costIndicator").css("color", "#7DB545");
+        $("#cost-minus").css("display", "none");
+        $("#cost-plus").css("display", "initial");
+    } else {
+        $("#costValue .form-control").css("color", "#D64545");
+        $("#costIndicator").css("color", "#D64545");
+        $("#cost-minus").css("display", "initial");
+        $("#cost-plus").css("display", "none");
+    }
+});
+
+//Yesterday Date function
+$(".date-yesterday").click(function () {
+    var date = new Date();
+    date.setDate(date.getDate() - 1);
+    $(".form-date").val(date.getFullYear() + "-" + ('0' + (date.getMonth() + 1)).slice(-2) + "-" + ('0' + date.getDate()).slice(-2))
+});
+
+//Add transaction Button Function
+$(".row .navi-right").click(function () {
+    addTransaction();
+    clearTransaction();
+
+    //alert
+});
+
+//ARCHIVE FUNCTION ==============================================
+// Contains all functions that belongs looking at past transactions
+//================================================================
 //retrieve all data from google sheets.
 var retrieveData = function () {
     $.ajax({
@@ -56,38 +95,45 @@ var retrieveData = function () {
     });
 }
 
+//MISC FUNCTION ==================================================
+// Contains all functions that belongs in every part of the app 
+//================================================================
 
-$(".category").click(function () {
-    categoryReset();
-    $(this).css("filter", "grayscale(0)");
-    $(this).css("-webkit-filter", "grayscale(0)");
-    //console.log(this.id)
-    categorySelect = this.id;
 
-    if (categorySelect == "Income") {
-        styleCost(1);
-    } else {
-        styleCost(0);
-    }
-});
 
-var styleCost = function (categoryparams) {
-    if (categoryparams == 1) {
-        $("#costValue .form-control").css("color", "green");
-        $("#costIndicator").css("color", "green");
-    } else {
-        $("#costValue .form-control").css("color", "red");
-        $("#costIndicator").css("color", "red");
-    }
+
+
+
+
+
+var resetBars = function () {
+    $(".row").show("slide", {
+        direction: "left"
+    }, 1000);
+};
+
+
+//TEMPLATES ======================================================
+//categories=    Food-Drinks   Shopping    Transport   Entertainment   Housing     Others      Income
+//================================================================
+//main template method
+var addTemplate = function (cost, item, category) {
+    var today = new Date()
+    var date = (today.getFullYear() + "-" + ('0' + (today.getMonth() + 1)).slice(-2) + "-" + ('0' + today.getDate()).slice(-2))
+
+    var url = script_url + "?date=" + date + "&cost=" + cost + "&cat=" + category + "&item=" + item + "&action=insert";
+    var request = jQuery.ajax({
+        crossDomain: true,
+        url: url,
+        method: "GET",
+        dataType: "jsonp"
+    });
+
+    //alert here.
 }
 
-
-$(".row .navi-right").click(function () {
-    console.log("clicked")
-    addTransaction();
-    clearTransaction();
+//template-1 - Toast Box Coffee
+$("#template-1").click(function () {
+    console.log("template 1 clicked");
+    addTemplate(1.5, "Toast Box Coffee", "Food-Drink")
 });
-
-var resetBars = function() {
-    $(".row").show("slide", { direction: "left" }, 1000);
-};
