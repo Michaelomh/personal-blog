@@ -5,5 +5,5 @@
 + Clickable categories
 - Design Yesterday button
 + change + and - accordingly + color
-- Testing out input type='tel'
++ Testing out input type='tel'
 

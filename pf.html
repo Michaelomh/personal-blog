@@ -20,8 +20,12 @@
 </head>
 
 <body>
+    <div class="alert alert-success alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Added transaction: </strong> <span class="alert-text"></span>
+    </div>
+
     <div class="containter-fluid">
-        
         <!--Topbar -->
         <div class="row row-title">
             <div class="col-9 title-left">
@@ -31,7 +35,7 @@
                 <i class="fas fa-archive fa-2x"></i>
             </div>
         </div>
-        
+
         <!--Add Transactions View -->
         <div class="row-container-add">
             <div class="row row-add">
@@ -75,7 +79,7 @@
         </div>
 
         <!--Templates View -->
-        <div class="row-container-template" style="display: none;">
+        <div class="row-container-template" style="display:none;">
             <div class="row row-template" id="template-1">
                 <div class="col-2 template-icon">
                     <i class="fas fa-coffee fa-2x"></i>
@@ -120,7 +124,7 @@
                 <div class="col-2 template-cost" style="padding-left:0px;">1.50</div>
             </div>
         </div>
-        
+
         <!--Button Buttons -->
         <div class="row row-navi">
             <div class="col-6 navi-left">

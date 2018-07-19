@@ -119,6 +119,12 @@ Starting
     display: none;
 }
 
+.alert {
+    position: absolute !important;
+    opacity: 0.8;
+    z-index: 90;
+    margin: 75vh 5px;
+}
 
 /*
 Template Styles

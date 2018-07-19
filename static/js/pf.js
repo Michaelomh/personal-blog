@@ -33,11 +33,18 @@ var addTransaction = function () {
 
     var url = script_url + "?date=" + date + "&cost=" + cost + "&cat=" + window.categorySelect + "&item=" + item + "&action=insert";
     var request = jQuery.ajax({
-        crossDomain: true,
-        url: url,
-        method: "GET",
-        dataType: "jsonp"
-    });
+            crossDomain: true,
+            url: url,
+            method: "GET",
+            dataType: "jsonp"
+        })
+        .done(function () {
+            addTransactionAlert(date, cost, window.categorySelect, item);
+            clearTransaction();
+        })
+        .fail(function () {
+            alert("error");
+        });
 }
 
 var clearTransaction = function () {
@@ -70,7 +77,8 @@ $(".category").click(function () {
 
 //Back Date function
 $(".date-back").click(function () {
-    $("#date").val()
+    var currentd = $("#date").val();
+
 });
 
 //Forward Date function
@@ -81,10 +89,16 @@ $(".date-forward").click(function () {
 //Add transaction Button Function
 $(".row .navi-right").click(function () {
     addTransaction();
-    clearTransaction();
-
     //alert
 });
+
+var addTransactionAlert = function (date, cost, category, item) {
+    $(".alert-text").text(item + " (" + category + "), for $" + cost + " on " + date);
+}
+
+var addTransactionFailure = function (date, cost, category, item) {
+    $(".alert-text").text(item + " (" + category + "), for $" + cost + " on " + date);
+}
 
 //ARCHIVE FUNCTION ==============================================
 // Contains all functions that belongs looking at past transactions
@@ -134,6 +148,8 @@ $(".navi-left").click(function () {
         }, 1000);
     }
 });
+
+
 //TEMPLATES ======================================================
 //categories=    Food-Drinks   Shopping    Transport   Entertainment   Housing     Others      Income
 //================================================================
@@ -151,6 +167,7 @@ var addTemplate = function (cost, item, category) {
     });
 
     //alert here.
+    addTransactionAlert(date, cost, category, item);
 }
 
 
