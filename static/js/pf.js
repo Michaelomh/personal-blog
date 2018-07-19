@@ -1,6 +1,8 @@
 //Global variables
-var categorySelect = "Food"
+var categorySelect = "Food-Drinks"; //Default always start at "Food"
 var script_url = "https://script.google.com/macros/s/AKfycbxKPtUxtPG5FGt5z_8Lg6AHzPie_g53724OVGuU6ruNl_suGIw/exec";
+var currentView = "Add"; //4 states - Add, Template, Archive, Edit
+
 
 $(document).ready(function () {
     //populate date
@@ -39,7 +41,7 @@ var addTransaction = function () {
 }
 
 var clearTransaction = function () {
-    categorySelect = "Food"
+    categorySelect = "Food-Drinks"
     var today = new Date()
     $(".form-date").val(today.getFullYear() + "-" + ('0' + (today.getMonth() + 1)).slice(-2) + "-" + ('0' + today.getDate()).slice(-2))
     $(".form-cost").val("")
@@ -66,11 +68,14 @@ $(".category").click(function () {
     }
 });
 
-//Yesterday Date function
-$(".date-yesterday").click(function () {
-    var date = new Date();
-    date.setDate(date.getDate() - 1);
-    $(".form-date").val(date.getFullYear() + "-" + ('0' + (date.getMonth() + 1)).slice(-2) + "-" + ('0' + date.getDate()).slice(-2))
+//Back Date function
+$(".date-back").click(function () {
+    $("#date").val()
+});
+
+//Forward Date function
+$(".date-forward").click(function () {
+
 });
 
 //Add transaction Button Function
@@ -98,21 +103,37 @@ var retrieveData = function () {
 //MISC FUNCTION ==================================================
 // Contains all functions that belongs in every part of the app 
 //================================================================
-
-
-
-
-
-
-
-
 var resetBars = function () {
-    $(".row").show("slide", {
+    $(".row").hide("slide", {
         direction: "left"
     }, 1000);
 };
 
+//Add transactions > Template.
+$(".navi-left").click(function () {
+    console.log(currentView);
+    if (currentView == "Add") {
+        //Add Transactions > Template
+        currentView = "Template";
+        $(".row-container-add").hide("slide", {
+            direction: "left"
+        }, 1000);
 
+        $(".row-container-template").show("slide", {
+            direction: "right"
+        }, 1000);
+    } else if (currentView == "Template") {
+        //Template > Add Transactions
+        currentView = "Add";
+        $(".row-container-template").hide("slide", {
+            direction: "left"
+        }, 1000);
+
+        $(".row-container-add").show("slide", {
+            direction: "right"
+        }, 1000);
+    }
+});
 //TEMPLATES ======================================================
 //categories=    Food-Drinks   Shopping    Transport   Entertainment   Housing     Others      Income
 //================================================================
@@ -132,8 +153,10 @@ var addTemplate = function (cost, item, category) {
     //alert here.
 }
 
+
+
 //template-1 - Toast Box Coffee
 $("#template-1").click(function () {
     console.log("template 1 clicked");
-    addTemplate(1.5, "Toast Box Coffee", "Food-Drink")
+    addTemplate(1.5, "Toast Box Coffee", "Food-Drinks")
 });

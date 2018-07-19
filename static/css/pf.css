@@ -2,16 +2,15 @@
 Starting
 */
 
-.Title {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    height: 15vh;
-    font-size: 2em;
-}
-
-.title-row {
+.row-title {
     background-color: #D64545;
     color: #fff;
+}
+
+.row-navi {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 
 .navi-left {
@@ -104,7 +103,8 @@ Starting
     background: black;
 }
 
-.date-yesterday {
+.date-back,
+.date-forward {
     font-size: 1.2em;
     line-height: 5;
 }
@@ -128,8 +128,34 @@ Template Styles
     line-height: 4;
     font-size: 1.2em;
     border-bottom: 2px solid #F17171;
+    position: absolute;
+    width: 100%;
 }
 
 .row-template .template-icon {
     line-height: 5;
+}
+
+#template-1 {
+    top: 12.5vh;
+}
+
+#template-2 {
+    top: 25vh;
+}
+
+#template-3 {
+    top: 37.5vh;
+}
+
+#template-4 {
+    top: 50vh;
+}
+
+#template-5 {
+    top: 62.5vh;
+}
+
+#template-6 {
+    top: 75vh;
 }
