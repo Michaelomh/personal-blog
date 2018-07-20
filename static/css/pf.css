@@ -128,19 +128,21 @@ Starting
     display: none;
 }
 
-.alert {
-    position: absolute !important;
-    opacity: 0.8;
-    z-index: 90;
-    bottom: 15vh;
-    margin: 0px 5px;
+.toast > div {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    width: calc(100% - 20px) !important;
+}
+
+#toast-container {
+    margin-bottom: 15vh;
 }
 
 /*
 Template Styles
 */
 
-row-container-template {
+.row-container-template {
     height: 75vh;
     overflow-y: scroll;
 }
@@ -149,34 +151,9 @@ row-container-template {
     line-height: 4;
     font-size: 1.2em;
     border-bottom: 2px solid #F17171;
-    position: absolute;
     width: 100%;
 }
 
 .row-template .template-icon {
     line-height: 5;
-}
-
-#template-1 {
-    top: 12.5vh;
-}
-
-#template-2 {
-    top: 25vh;
-}
-
-#template-3 {
-    top: 37.5vh;
-}
-
-#template-4 {
-    top: 50vh;
-}
-
-#template-5 {
-    top: 62.5vh;
-}
-
-#template-6 {
-    top: 75vh;
 }

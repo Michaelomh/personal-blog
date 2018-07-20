@@ -3,6 +3,20 @@ var categorySelect = "Food-Drinks"; //Default always start at "Food"
 var script_url = "https://script.google.com/macros/s/AKfycbxKPtUxtPG5FGt5z_8Lg6AHzPie_g53724OVGuU6ruNl_suGIw/exec";
 var currentView = "Add"; //4 states - Add, Template, Archive, Edit
 
+//Toaster options
+toastr.options = {
+    "closeButton": true,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": false,
+    "positionClass": "toast-bottom-full-width",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000"
+}
 
 $(document).ready(function () {
     //populate date
@@ -11,7 +25,7 @@ $(document).ready(function () {
 
     //make all category grey except for food-drink category.
     categoryReset();
-    
+
     //retrieveData();
 });
 
@@ -35,11 +49,12 @@ var addTransaction = function (date, cost, item) {
             dataType: "jsonp"
         })
         .done(function () {
-            addTransactionAlert(date, cost, window.categorySelect, item);
+            var message = (item + " (" + window.categorySelect + "), for $" + cost + " on " + date);
+            toastr["success"](message, "Added Transaction:")
             clearTransaction();
         })
         .fail(function () {
-            addTransactionFailure();
+            toastr["error"]("Please try again.", "Server Failure:")
         });
 }
 
@@ -89,27 +104,12 @@ $(".row .navi-right").click(function () {
     var cost = $(".form-cost").val();
     var item = $(".form-item").val();
     addTransaction(date, cost, item);
-    $('.navi-block').css('display','block');
+    $('.navi-block').css('display', 'block');
     setTimeout(function () {
         $('.row .navi-right').addClass('show');
-        $('.navi-block').css('display','none');
+        $('.navi-block').css('display', 'none');
     }, 5000);
 });
-
-var addTransactionAlert = function (date, cost, category, item) {
-    $(".alert-text").text(item + " (" + category + "), for $" + cost + " on " + date);
-    $('.alert-success').addClass('fade');
-    setTimeout(function () {
-        $('.alert-success').removeClass('fade');
-    }, 5000);
-}
-
-var addTransactionFailure = function () {
-    $('.alert-danger').addClass('fade');
-    setTimeout(function () {
-        $('.alert-danger').removeClass('fade');
-    }, 5000);
-}
 
 //ARCHIVE FUNCTION ==============================================
 // Contains all functions that belongs looking at past transactions
@@ -170,20 +170,50 @@ var addTemplate = function (cost, item, category) {
 
     var url = script_url + "?date=" + date + "&cost=" + cost + "&cat=" + category + "&item=" + item + "&action=insert";
     var request = jQuery.ajax({
-        crossDomain: true,
-        url: url,
-        method: "GET",
-        dataType: "jsonp"
-    });
-
-    //alert here.
-    addTransactionAlert(date, cost, category, item);
+            crossDomain: true,
+            url: url,
+            method: "GET",
+            dataType: "jsonp"
+        })
+        .done(function () {
+            var message = (item + " (" + category + "), for $" + cost + " on " + date);
+            toastr["success"](message, "Added Transaction:")
+        })
+        .fail(function () {
+            toastr["error"]("Please try again.", "Server Failure:")
+        });
 }
 
 
 
 //template-1 - Toast Box Coffee
-$("#template-1").click(function () {
-    console.log("template 1 clicked");
-    addTemplate(1.5, "Toast Box Coffee", "Food-Drinks")
+$(".row-template").click(function () {
+    //check id.
+    templateID = this.id;
+    console.log(templateID);
+    //From template use switch statement and add Template
+
+    switch (templateID) {
+        case 'template-1':
+            addTemplate(1.1, "Toast Box Coffee", "Food-Drinks")
+            break;
+        case 'template-2':
+            //addTemplate(1.2, "Toast Box Coffee", "Food-Drinks")
+            break;
+        case 'template-3':
+            //addTemplate(1.3, "Toast Box Coffee", "Food-Drinks")
+            break;
+        case 'template-4':
+            //addTemplate(1.4, "Toast Box Coffee", "Food-Drinks")
+            break;
+        case 'template-5':
+            //addTemplate(1.5, "Toast Box Coffee", "Food-Drinks")
+            break;
+        case 'template-6':
+            //addTemplate(1.6, "Toast Box Coffee", "Food-Drinks")
+            break;
+        case 'template-7':
+            //addTemplate(1.7, "Toast Box Coffee", "Food-Drinks")
+            break;
+    }
 });
