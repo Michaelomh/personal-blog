@@ -20,9 +20,14 @@
 </head>
 
 <body>
-    <div class="alert alert-success alert-dismissible fade show">
+    <div class="alert alert-success alert-dismissible fade" role="alert">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         <strong>Added transaction: </strong> <span class="alert-text"></span>
+    </div>
+
+    <div class="alert alert-danger alert-dismissible fade" role="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Server Error: </strong> <span class="alert-text">Please try to submit again.</span>
     </div>
 
     <div class="containter-fluid">
@@ -39,7 +44,7 @@
         <!--Add Transactions View -->
         <div class="row-container-add">
             <div class="row row-add">
-                <div class="col-sm-12">
+                <div class="col-sm-12" style="padding: 0px;">
                     <div class="scrolling-wrapper">
                         <img class="img-fluid category category-food" id="Food-Drinks" src="/static/img/pf/food.png">
                         <img class="img-fluid category category-shopping" id="Shopping" src="/static/img/pf/shopping.png">
@@ -88,7 +93,7 @@
                 <div class="col-2 template-cost" style="padding-left:0px;">1.50</div>
             </div>
 
-            <div class="row row-template" id="template-2">
+            <!--<div class="row row-template" id="template-2">
                 <div class="col-2 template-icon">
                     <i class="fas fa-coffee fa-2x"></i>
                 </div>
@@ -122,13 +127,15 @@
                 </div>
                 <div class="col-8 template-text">Toast Box Coffee</div>
                 <div class="col-2 template-cost" style="padding-left:0px;">1.50</div>
-            </div>
+            </div>-->
         </div>
 
         <!--Button Buttons -->
         <div class="row row-navi">
             <div class="col-6 navi-left">
                 <i class="fas fa-bolt fa-2x"></i>
+            </div>
+            <div class="col-6 navi-block" style="display:none;">
             </div>
             <div class="col-6 navi-right">
                 <i class="fas fa-plus-circle fa-2x"></i>

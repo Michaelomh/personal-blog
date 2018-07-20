@@ -27,6 +27,15 @@ Starting
     line-height: 4;
 }
 
+.navi-block {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    height: 12.5vh;
+}
+
 .title-left {
     font-weight: bold;
     font-size: 2.5em;
@@ -123,12 +132,18 @@ Starting
     position: absolute !important;
     opacity: 0.8;
     z-index: 90;
-    margin: 75vh 5px;
+    bottom: 15vh;
+    margin: 0px 5px;
 }
 
 /*
 Template Styles
 */
+
+row-container-template {
+    height: 75vh;
+    overflow-y: scroll;
+}
 
 .row-template {
     line-height: 4;

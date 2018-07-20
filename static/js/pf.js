@@ -11,9 +11,7 @@ $(document).ready(function () {
 
     //make all category grey except for food-drink category.
     categoryReset();
-    $(".category-food").css("filter", "grayscale(0)");
-    $(".category-food").css("-webkit-filter", "grayscale(0)");
-
+    
     //retrieveData();
 });
 
@@ -23,14 +21,12 @@ $(document).ready(function () {
 var categoryReset = function () {
     $(".category").css("filter", "grayscale(1)");
     $(".category").css("-webkit-filter", "grayscale(1)");
+    $(".category-food").css("filter", "grayscale(0)");
+    $(".category-food").css("-webkit-filter", "grayscale(0)");
 }
 
 // Make an AJAX call to Google Script
-var addTransaction = function () {
-    var date = $(".form-date").val()
-    var cost = $(".form-cost").val()
-    var item = $(".form-item").val()
-
+var addTransaction = function (date, cost, item) {
     var url = script_url + "?date=" + date + "&cost=" + cost + "&cat=" + window.categorySelect + "&item=" + item + "&action=insert";
     var request = jQuery.ajax({
             crossDomain: true,
@@ -43,7 +39,7 @@ var addTransaction = function () {
             clearTransaction();
         })
         .fail(function () {
-            alert("error");
+            addTransactionFailure();
         });
 }
 
@@ -53,6 +49,7 @@ var clearTransaction = function () {
     $(".form-date").val(today.getFullYear() + "-" + ('0' + (today.getMonth() + 1)).slice(-2) + "-" + ('0' + today.getDate()).slice(-2))
     $(".form-cost").val("")
     $(".form-item").val("")
+    categoryReset();
 }
 
 $(".category").click(function () {
@@ -88,16 +85,30 @@ $(".date-forward").click(function () {
 
 //Add transaction Button Function
 $(".row .navi-right").click(function () {
-    addTransaction();
-    //alert
+    var date = $(".form-date").val();
+    var cost = $(".form-cost").val();
+    var item = $(".form-item").val();
+    addTransaction(date, cost, item);
+    $('.navi-block').css('display','block');
+    setTimeout(function () {
+        $('.row .navi-right').addClass('show');
+        $('.navi-block').css('display','none');
+    }, 5000);
 });
 
 var addTransactionAlert = function (date, cost, category, item) {
     $(".alert-text").text(item + " (" + category + "), for $" + cost + " on " + date);
+    $('.alert-success').addClass('fade');
+    setTimeout(function () {
+        $('.alert-success').removeClass('fade');
+    }, 5000);
 }
 
-var addTransactionFailure = function (date, cost, category, item) {
-    $(".alert-text").text(item + " (" + category + "), for $" + cost + " on " + date);
+var addTransactionFailure = function () {
+    $('.alert-danger').addClass('fade');
+    setTimeout(function () {
+        $('.alert-danger').removeClass('fade');
+    }, 5000);
 }
 
 //ARCHIVE FUNCTION ==============================================
@@ -125,7 +136,6 @@ var resetBars = function () {
 
 //Add transactions > Template.
 $(".navi-left").click(function () {
-    console.log(currentView);
     if (currentView == "Add") {
         //Add Transactions > Template
         currentView = "Template";
