@@ -25,11 +25,12 @@ Throughout my internship, I've been brought to many big client meetings to discu
         <span class="image-description">Check-in Booth</span>
     </div>
         <div class="col-md-6 col-sm-12 no-padding">
-        <image class="image-responsive" src="http://www.datayse.com/static/img/blogpost/2016-08-01-MC-2.png" />
+        <image class="image-responsive" src="https://github.com/Michaelomh/personal-blog/blob/master/static/img/blogpost/2016-08-01-MC-2.png?raw=true" />
         <span class="image-description">Showcase Check-in Stand</span>
     </div>
 </div>
 
+<hr />
 
 ### IBM Chief Marketing Officer Event ###
 <div class="col-md-12 col-sm-12 no-padding" style="margin-bottom: 35px; text-align: center;">
@@ -38,13 +39,17 @@ Throughout my internship, I've been brought to many big client meetings to discu
         <span class="image-description">Pre-event website personality identifier based on social media. (Using IBM Watson)</span>
     </div>
         <div class="col-md-12 col-sm-12 no-padding">
-        <image class="image-responsive" src="http://www.datayse.com/static/img/blogpost/2016-08-01-ATS-2.jpg" />
+        <image class="image-responsive" src="https://github.com/Michaelomh/personal-blog/blob/master/static/img/blogpost/2016-08-01-ATS-2.jpg?raw=true" />
         <span class="image-description">Song Selector + Playlist (Using Spotify API)</span>
     </div>
 </div>
 
+<hr />
+
 ### DGFX Studios Website Redesign ###
 **Description:** This was the first project that I worked on to understand more about HTML, CSS, JavaScript and jQuery. I redesigned the website for [DGFX Studios](http://dgfxstudio.com.sg/) from a wix website into wordpress website.
 
+<hr />
+
 ### Poster ###
-In conclusion, if you would like an overview of my internship, you can view it <a href="http://www.datayse.com/static/img/blogpost/2016-08-01-Zeguestlist_Poster.pdf" download>here</a>. 
+In conclusion, if you would like an overview of my internship, you can view it <a href="http://www.datayse.com/static/img/blogpost/2016-08-01-Zeguestlist_Poster.pdf">here</a>. 
