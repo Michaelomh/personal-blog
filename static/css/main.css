@@ -64,6 +64,14 @@ a:hover {
     text-decoration: none;
 }
 
+.no-padding {
+    padding: 0px !important;
+}
+
+.image-description {
+    font-style: italic;
+}
+
 
 /* Page Layout */
 

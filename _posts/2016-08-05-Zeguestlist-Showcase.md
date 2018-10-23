@@ -15,21 +15,33 @@ Throughout my internship, I've been brought to many big client meetings to discu
 
 **Tools Used:** HTML/CSS, JavaScript, jQuery, PHP, Building Wordpress Websites and Communicating with Clients.
 
-## Internship Showcase - Top 3##
+## Internship Showcase - Top 3 ##
 ---
 ### MasterCard's World Cities 2016 ###
-**Description:** 
 
-//pictures video
-//photos of the event itself.
+<div class="col-md-12 col-sm-12 no-padding" style="margin-bottom: 35px; text-align: center;">
+    <div class="col-md-6 no-padding">
+        <image class="image-responsive" src="http://www.datayse.com/static/img/blogpost/2016-08-01-MC-1.jpg" />
+        <span class="image-description">Check-in Booth</span>
+    </div>
+        <div class="col-md-6 col-sm-12 no-padding">
+        <image class="image-responsive" src="http://www.datayse.com/static/img/blogpost/2016-08-01-MC-2.png" />
+        <span class="image-description">Showcase Check-in Stand</span>
+    </div>
+</div>
+
 
 ### IBM Chief Marketing Officer Event ###
-**Description:** 
-
-//pictures of the website before - genereate based on X and X
-//jukebox - to generate song and to show the current playlist
-//Jukebox video
-//balls moving accordingly
+<div class="col-md-12 col-sm-12 no-padding" style="margin-bottom: 35px; text-align: center;">
+    <div class="col-md-12 col-sm-12 no-padding" style="margin-bottom: 15px;">
+        <image class="image-responsive" src="http://www.datayse.com/static/img/blogpost/2016-08-01-ATS-1.png" />
+        <span class="image-description">Pre-event website personality identifier based on social media. (Using IBM Watson)</span>
+    </div>
+        <div class="col-md-12 col-sm-12 no-padding">
+        <image class="image-responsive" src="http://www.datayse.com/static/img/blogpost/2016-08-01-ATS-2.jpg" />
+        <span class="image-description">Song Selector + Playlist (Using Spotify API)</span>
+    </div>
+</div>
 
 ### DGFX Studios Website Redesign ###
 **Description:** This was the first project that I worked on to understand more about HTML, CSS, JavaScript and jQuery. I redesigned the website for [DGFX Studios](http://dgfxstudio.com.sg/) from a wix website into wordpress website.
