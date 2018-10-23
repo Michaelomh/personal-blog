@@ -54,5 +54,12 @@
 		"url": "../my_projects/2017/01/29/Visualising-Passengers-within-US-in-2015.html",
 		"date": "Jan 2017",
 		"tags": ["Data Analytics", "Development"]
-	}, 
+	}, {
+		"slug": "ZG-Showcase",
+        "name": "Zeguestlist Showcase",
+		"image": "Zeguestlist_Showcase.jpg",
+		"url": "../my_projects/2016/08/01/Zeguestlist-Showcase.html",
+		"date": "Aug 2016",
+		"tags": ["Data Analytics", "Development"]
+	}
 ]
