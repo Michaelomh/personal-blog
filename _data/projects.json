@@ -1,6 +1,14 @@
 [
 	{
 		"slug": "",
+        "name": "Winner of Web Design Challenge",
+		"image": "ellipsisC5.jpg",
+		"url": "https://michaelomh.github.io/Ellipsis-Challenge-Q5/index.html",
+		"date": "July 2018",
+		"tags": ["Development"]
+	},
+    {
+		"slug": "",
         "name": "thementoringcircle.org",
 		"image": "TMC_Project.jpg",
 		"url": "http://thementoringcircle.org",
