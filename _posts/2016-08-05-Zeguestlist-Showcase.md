@@ -28,6 +28,13 @@ Throughout my internship, I've been brought to many big client meetings to discu
         <image class="image-responsive" src="https://github.com/Michaelomh/personal-blog/blob/master/static/img/blogpost/2016-08-01-MC-2.png?raw=true" />
         <span class="image-description">Showcase Check-in Stand</span>
     </div>
+    <div class="col-md-12 col-sm-12 no-padding">
+        <video width="45%" height="480" muted controls loop>
+          <source src="http://www.datayse.com/static/img/blogpost/2016-08-01-MC-3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video><br/>
+        <span class="image-description">Demo of Check-in Stand</span>
+    </div>
 </div>
 
 <hr />
@@ -41,6 +48,26 @@ Throughout my internship, I've been brought to many big client meetings to discu
         <div class="col-md-12 col-sm-12 no-padding">
         <image class="image-responsive" src="https://github.com/Michaelomh/personal-blog/blob/master/static/img/blogpost/2016-08-01-ATS-2.jpg?raw=true" />
         <span class="image-description">Song Selector + Playlist (Using Spotify API)</span>
+    </div>
+</div>
+
+<div class="col-md-12 col-sm-12 no-padding" style="margin-bottom: 35px; text-align: center;">
+    <div class="col-md-6 col-sm-6 no-padding" style="margin-bottom: 15px;">
+        <video width="100%" height="480" muted controls loop>
+          <source src="http://www.datayse.com/static/img/blogpost/2016-08-01-ATS-3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <br/>
+        <span class="image-description">Demonstration of Jukebox in Action</span>
+    </div>
+
+    <div class="col-md-6 col-sm-6 no-padding" style="margin-bottom: 15px;">
+        <video width="100%" height="480" muted controls loop>
+          <source src="http://www.datayse.com/static/img/blogpost/2016-08-01-ATS-4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <br/>
+        <span class="image-description">Live visualisation of breakdown of personalities</span>
     </div>
 </div>
 
