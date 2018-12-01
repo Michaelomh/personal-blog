@@ -1,9 +1,3 @@
-+ HTML, Add select for value, date, (for now),  name
-+ HTML add in categories for 7 categories
-+ Connect to the Google sheets when press submit
-+ Overall Design and aesthetics
-+ Clickable categories
-+ Design Yesterday button
-+ change + and - accordingly + color
-+ Testing out input type='tel'
+- Show Day-Month
+- Show Hour Min
 

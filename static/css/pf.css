@@ -2,52 +2,6 @@
 Starting
 */
 
-.row-title {
-    background-color: #D64545;
-    color: #fff;
-}
-
-.row-navi {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-}
-
-.navi-left {
-    background-color: #F17171;
-    font-size: 1.5em;
-    text-align: center;
-    line-height: 4;
-}
-
-.navi-right {
-    background-color: #EE4D4D;
-    font-size: 1.5em;
-    text-align: center;
-    line-height: 4;
-}
-
-.navi-block {
-    background-color: transparent;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 99;
-    height: 12.5vh;
-}
-
-.title-left {
-    font-weight: bold;
-    font-size: 2.5em;
-    line-height: 2;
-}
-
-.title-right {
-    text-align: center;
-    line-height: 5;
-    font-size: 1.2em;
-}
-
 .row {
     font-family: 'Open Sans', sans-serif;
     height: 12.5vh;
@@ -55,8 +9,8 @@ Starting
     margin-left: 0px;
 }
 
-.row-add {
-    border-bottom: 2px solid #D64545;
+.row-amount{
+    height: 15vh;
 }
 
 .container-fluid {
@@ -68,11 +22,13 @@ Starting
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    width: 100%;
+    height: 100%;
 }
 
 .category {
     display: inline-block;
-    width: 75px;
+    height: 100%;
 }
 
 .form-control {
@@ -118,9 +74,6 @@ Starting
     line-height: 5;
 }
 
-.scrolling-wrapper {
-    width: 100%;
-}
 
 -webkit-overflow-scrolling: touch;
 
@@ -136,24 +89,4 @@ Starting
 
 #toast-container {
     margin-bottom: 15vh;
-}
-
-/*
-Template Styles
-*/
-
-.row-container-template {
-    height: 75vh;
-    overflow-y: scroll;
-}
-
-.row-template {
-    line-height: 4;
-    font-size: 1.2em;
-    border-bottom: 2px solid #F17171;
-    width: 100%;
-}
-
-.row-template .template-icon {
-    line-height: 5;
 }

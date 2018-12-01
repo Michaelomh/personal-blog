@@ -23,19 +23,35 @@
 <body>
     <div class="containter-fluid">
         <!--Topbar -->
-        <div class="row row-title">
-            <div class="col-9 title-left">
-                <span class="title">ADD</span>
+            <div class="row row-amount">
+                <div class="col-3" id="costIndicator">
+                    <i class="far fa-minus fa-2x" id="cost-minus"></i>
+                    <i class="far fa-plus fa-2x" id="cost-plus" style="display:none;"></i>
+                </div>  
+                <div class="col-9" id="costValue">
+                    <input type="number" step="any" class="form-control form-cost" id="cost" placeholder="Cost">
+                </div>
             </div>
-            <div class="col-3 title-right">
-                <i class="fas fa-archive fa-2x"></i>
-            </div>
-        </div>
 
         <!--Add Transactions View -->
         <div class="row-container-add">
-            <div class="row row-add">
-                <div class="col-sm-12" style="padding: 0px;">
+            <div class="row">
+                <div class="col-12" id="costValue">
+                    <input type="text" class="form-control form-comment" id="comment" placeholder="comment">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-6">
+                    <input type="text" class="form-control form-date" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" placeholder="DD/MM">
+                </div>
+                <div class="col-6">
+                    <input type="date" class="form-control form-date"  id="date" placeholder="HH:MM">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12" style="padding: 0px;">
                     <div class="scrolling-wrapper">
                         <img class="img-fluid category category-food" id="Food-Drinks" src="/static/img/pf/food.png">
                         <img class="img-fluid category category-shopping" id="Shopping" src="/static/img/pf/shopping.png">
@@ -47,98 +63,66 @@
                     </div>
                 </div>
             </div>
-            <div class="row row-add">
-                <div class="col-3" id="costIndicator">
-                    <i class="far fa-minus fa-2x" id="cost-minus"></i>
-                    <i class="far fa-plus fa-2x" id="cost-plus" style="display:none;"></i>
-                </div>
-                <div class="col-9" id="costValue">
-                    <input type="number" step="any" class="form-control form-cost" id="cost" placeholder="Cost">
-                </div>
-            </div>
-            <div class="row row-add">
-                <div class="col-2 date-back">
-                    <i class="fas fa-angle-left fa-2x"></i>
-                </div>
-                <div class="col-2 date-forward">
-                    <i class="fas fa-angle-right fa-2x"></i>
-                </div>
-                <div class="col-8">
-                    <input type="text" class="form-control form-date" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" placeholder="date">
-                </div>
-            </div>
-            <div class="row row-add">
-                <div class="col-sm-12">
-                    <input type="text" class="form-control form-item" id="name" placeholder="Item">
-                </div>
-            </div>
+
         </div>
-
-        <!--Templates View -->
-        <div class="row-container-template" style="display:none;">
-            <div class="row row-template" id="template-1">
-                <div class="col-2 template-icon">
-                    <i class="fas fa-coffee fa-2x"></i>
+        
+        <div class="row">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-4">
+                        7
+                    </div>
+                    <div class="col-4">
+                        8
+                    </div>
+                    <div class="col-4">
+                        9
+                    </div>
                 </div>
-                <div class="col-8 template-text">Toast Box Coffee</div>
-                <div class="col-2 template-cost" style="padding-left:0px;">1.50</div>
-            </div>
-<!--
-
-            <div class="row row-template" id="template-2">
-                <div class="col-2 template-icon">
-                    <i class="fas fa-coffee fa-2x"></i>
+                <div class="row">
+                    <div class="col-4">
+                        4
+                    </div>
+                    <div class="col-4">
+                        5
+                    </div>
+                    <div class="col-4">
+                        6
+                    </div>
                 </div>
-                <div class="col-8 template-text">Toast Box Coffee</div>
-                <div class="col-2 template-cost" style="padding-left:0px;">1.50</div>
-            </div>
-            <div class="row row-template" id="template-3">
-                <div class="col-2 template-icon">
-                    <i class="fas fa-coffee fa-2x"></i>
+                <div class="row">
+                    <div class="col-4">
+                        1
+                    </div>
+                    <div class="col-4">
+                        2
+                    </div>
+                    <div class="col-4">
+                       3
+                    </div>
                 </div>
-                <div class="col-8 template-text">Toast Box Coffee</div>
-                <div class="col-2 template-cost" style="padding-left:0px;">1.50</div>
-            </div>
-            <div class="row row-template" id="template-4">
-                <div class="col-2 template-icon">
-                    <i class="fas fa-coffee fa-2x"></i>
+                                <div class="row">
+                    <div class="col-4">
+                        .
+                    </div>
+                    <div class="col-4">
+                        0
+                    </div>
+                    <div class="col-4">
+                        &lt;
+                    </div>
                 </div>
-                <div class="col-8 template-text">Toast Box Coffee</div>
-                <div class="col-2 template-cost" style="padding-left:0px;">1.50</div>
             </div>
-            <div class="row row-template" id="template-5">
-                <div class="col-2 template-icon">
-                    <i class="fas fa-coffee fa-2x"></i>
+            <div class="col-3">
+                <div class="template-panel">
+                    Template1
+                    Template2
+                    Template3
                 </div>
-                <div class="col-8 template-text">Toast Box Coffee</div>
-                <div class="col-2 template-cost" style="padding-left:0px;">1.50</div>
-            </div>
-            <div class="row row-template" id="template-6">
-                <div class="col-2 template-icon">
-                    <i class="fas fa-coffee fa-2x"></i>
+                
+                <div class="add-panel">
+                    Add
                 </div>
-                <div class="col-8 template-text">Toast Box Coffee</div>
-                <div class="col-2 template-cost" style="padding-left:0px;">1.50</div>
-            </div>
-            <div class="row row-template" id="template-7">
-                <div class="col-2 template-icon">
-                    <i class="fas fa-coffee fa-2x"></i>
-                </div>
-                <div class="col-8 template-text">Toast Box Coffee</div>
-                <div class="col-2 template-cost" style="padding-left:0px;">1.50</div>
-            </div>
--->
-        </div>
-
-        <!--Button Buttons -->
-        <div class="row row-navi">
-            <div class="col-6 navi-left">
-                <i class="fas fa-bolt fa-2x"></i>
-            </div>
-            <div class="col-6 navi-block" style="display:none;">
-            </div>
-            <div class="col-6 navi-right">
-                <i class="fas fa-plus-circle fa-2x"></i>
             </div>
         </div>
     </div>
@@ -152,6 +136,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
     <script src="/static/js/pf.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    
 </footer>
 
 </html>
