@@ -25,5 +25,5 @@
   ],
   "start_url": "/pf.html",
   "display": "standalone",
-  "orientation": "landscape"
+  "orientation": "portrait"
 }

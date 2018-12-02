@@ -9,8 +9,8 @@
 .container-fluid {
     background-color: #ffffff;
     overflow: hidden;
-    padding-top 25px;
     padding: 15px;
+    padding-top: 25px;
 }
 
 body {
@@ -24,21 +24,31 @@ h1 {
     margin: 0px auto;
 }
 
+.btn {
+    width: 100%;
+}
+
 /*-------- Form Styles ------*/
 
 .form-control {
     height: 100%;
-    text-align: right;
+    text-align: center;
     font-weight: bold;
     border: none;
     background-color: transparent;
-    font-size: 3em;
+    font-size: 2em;
+    border-radius: 0px;
 }
 
 .form-control:hover {
-    text-align: left;
+    text-align: center;
     border: none;
     background-color: transparent;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-bottom: 2px solid green;
 }
 
 /*-------- Toastr Styles ------*/
@@ -64,31 +74,44 @@ h1 {
 
 .row-mainRow {
     height: 18vh;
-    background-color: darkgreen;
+    background-color: #27ae60;
     color: #ffffff;
+    border-radius: 5px;
+    margin: 0px 15px;
+}
+
+.row-mainRow > .col-9{
+    text-align: right;
+}
+
+#transaction-amt{
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    line-height: 3em;
 }
 
 /*-------- Row Notes Styles ------*/
 
 .row-notes {
-    height: 10vh;
+    height: 7vh;
 }
 
 /*-------- Row TimeStamp Styles ------*/
 
 .row-timeStamp {
-    height: 13vh;
+    height: 8vh;
 }
+
 
 /*-------- Row Categories Styles ------*/
 
 .row-category {
-    height: 6vh;
+    height: 7vh;
 }
 
-.category {
-    display: inline-block;
-    height: 100%;
+.row-category > .col-4 {
+    padding-top: 15px;
 }
 
 
@@ -106,20 +129,30 @@ h1 {
     height: 100%;
 }
 
+.btn-active,
+.btn-active:hover,
+.btn-active:active,
+.btn-active:focus {
+    color: #fff !important;
+    background-color: #27ae60 !important;
+    border-color: #27ae60 !important;
+    box-shadow: none !important;
+}
+
+.btn-outline-secondary {
+    color: #27ae60;
+    background-color: transparent;
+    background-image: none;
+    border: 2px solid #27ae60;
+    border-radius: 5px;
+}
+
 
 /*-------- Row Calculator Styles ------*/
 
 .row-calculator {
-    height: 10vh;
+    height: 11vh;
     text-align: center;
-}
-
-.row-calculator-right {
-    text-align: right;
-}
-
-.row-calculator-left {
-    text-align: left;
 }
 
 .row-calculator > div > p {
@@ -130,8 +163,10 @@ h1 {
 }
 
 .row-templates {
-   height: 30vh; 
+    height: 30vh;
     overflow-y: scroll;
+    margin-top: 20px;
+    padding-right: 15px;
 }
 
 -webkit-overflow-scrolling-y: touch;
