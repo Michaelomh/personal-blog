@@ -18,6 +18,8 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
+    <link rel="manifest" href="/manifest.json">
+
     <link rel="apple-touch-icon" sizes="57x57" href="/static/img/Icon-57.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/Icon-72.png" />
     <link rel="apple-touch-icon" sizes="114x114" href="/static/img/Icon-114.png" />
@@ -35,12 +37,12 @@
 
         <!--Main Row-->
         <div class="row row-mainRow">
-            <div class="col-3" id="costIndicator">
+            <div class="col-3">
                 <h3>Add</h3>
                 <h2>SGD</h2>
             </div>
-            <div class="col-9" id="costValue">
-                <span>3.00</span>
+            <div class="col-9">
+                <span id="transaction-amt">3.00</span>
             </div>
         </div>
 
@@ -54,70 +56,81 @@
         <!--TimeStamp-->
         <div class="row row-timeStamp">
             <div class="col-6">
-                <input type="date" class="form-control form-date" id="date" placeholder="DD/MM">
+                <input type="text" class="form-control form-date" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" placeholder="DD/MM">
             </div>
             <div class="col-6">
-                <input type="text" class="form-control form-date" id="time" placeholder="HH:MM">
+                <input type="text" class="form-control form-time" id="time" placeholder="HH:MM">
             </div>
         </div>
 
         <!--Category-->
         <div class="row row-category">
-            <div class="col" style="padding: 0px;">
-                <div class="scrolling-wrapper-x">
-                    <img class="img-fluid category category-shopping" id="Shopping" src="/static/img/pf/shopping.png">
-                    <img class="img-fluid category category-trans" id="Transport" src="/static/img/pf/trans.png">
-                    <img class="img-fluid category category-house" id="Housing" src="/static/img/pf/hosuing.png">
-                    <img class="img-fluid category category-others" id="Others" src="/static/img/pf/others.png">
-                    <img class="img-fluid category category-cash" id="Income" src="/static/img/pf/csah.png">
-                    <img class="img-fluid category category-food" id="Food-Drinks" src="/static/img/pf/food.png">
-                </div>
+            <div class="col">
+                <img class="img-fluid category category-others" id="Others" src="/static/img/pf/others.png">
+            </div>
+            <div class="col">
+                <img class="img-fluid category category-cash" id="Income" src="/static/img/pf/csah.png">
+            </div>
+            <div class="col">
+                <img class="img-fluid category category-food" id="Food-Drinks" src="/static/img/pf/food.png">
+            </div>
+        </div>
+
+        <div class="row row-category">
+            <div class="col">
+                <img class="img-fluid category category-shopping" id="Shopping" src="/static/img/pf/shopping.png">
+            </div>
+            <div class="col">
+                <img class="img-fluid category category-trans" id="Transport" src="/static/img/pf/trans.png">
+            </div>
+            <div class="col">
+                <img class="img-fluid category category-house" id="Housing" src="/static/img/pf/hosuing.png">
             </div>
         </div>
 
         <div class="row">
             <div class="col-9">
                 <div class="row row-calculator">
-                    <div class="col-4 row-calculator-left">
+                    <div id="calc-7" class="col-4 row-calculator-left">
                         <p>7</p>
                     </div>
-                    <div class="col-4">
+                    <div id="calc-8" class="col-4">
                         <p>8</p>
                     </div>
-                    <div class="col-4 row-calculator-right">
+                    <div id="calc-9" class="col-4 row-calculator-right">
                         <p>9</p>
                     </div>
                 </div>
                 <div class="row row-calculator">
-                    <div class="col-4 row-calculator-left">
+                    <div id="calc-4" class="col-4 row-calculator-left">
                         <p>4</p>
                     </div>
-                    <div class="col-4">
+                    <div id="calc-5" class="col-4">
                         <p>5</p>
                     </div>
-                    <div class="col-4 row-calculator-right">
+                    <div id="calc-6" class="col-4 row-calculator-right">
                         <p>6</p>
                     </div>
                 </div>
                 <div class="row row-calculator">
-                    <div class="col-4 row-calculator-left">
+                    <div id="calc-1" class="col-4 row-calculator-left">
                         <p>1</p>
                     </div>
-                    <div class="col-4">
+                    <div id="calc-2" class="col-4">
                         <p>2</p>
                     </div>
-                    <div class="col-4 row-calculator-right">
+                    <div id="calc-3" class="col-4 row-calculator-right">
                         <p>3</p>
                     </div>
                 </div>
                 <div class="row row-calculator">
-                    <div class="col-4 row-calculator-left">
+                    <div id="calc-dot" class="col-4 row-calculator-left">
                         <p>.</p>
                     </div>
-                    <div class="col-4">
+                    <div id="calc-0" class="col-4">
                         <p>0</p>
                     </div>
-                    <div class="col-4 row-calculator-right">
+                    <div id="calc-del" class="col-4 row-calculator-right">
                         <p>-</p>
                     </div>
                 </div>
@@ -133,8 +146,8 @@
                         <img class="img-fluid category-food" id="Food-Drinks" src="/static/img/pf/food.png">
                     </div>
                 </div>
-                <div class="row row-addButton">
-                    <div class="add-panel">
+                <div class="row row-add row-calculator">
+                    <div id="calc-add" class="col-4">
                         Add
                     </div>
                 </div>

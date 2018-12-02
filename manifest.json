@@ -1,0 +1,29 @@
+{
+  "short_name": "Expenyse",
+  "name": "Expenyse App",
+  "icons": [
+    {
+      "src": "/static/img/Icon-57.png",
+      "sizes": "57x57",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/Icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/Icon-144.png",
+      "sizes": "144x143",
+      "type": "image/png"
+    },
+    {  
+      "src": "/static/img/Icon-114.png",
+      "sizes": "114x114",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/pf.html",
+  "display": "standalone",
+  "orientation": "landscape"
+}

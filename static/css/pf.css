@@ -33,7 +33,6 @@ h1 {
     border: none;
     background-color: transparent;
     font-size: 3em;
-    color: #ffffff;
 }
 
 .form-control:hover {
@@ -72,7 +71,7 @@ h1 {
 /*-------- Row Notes Styles ------*/
 
 .row-notes {
-    height: 11vh;
+    height: 10vh;
 }
 
 /*-------- Row TimeStamp Styles ------*/
@@ -84,7 +83,7 @@ h1 {
 /*-------- Row Categories Styles ------*/
 
 .row-category {
-    height: 11vh;
+    height: 6vh;
 }
 
 .category {
@@ -114,8 +113,6 @@ h1 {
     height: 10vh;
     text-align: center;
 }
-
-.row-calculator > div {}
 
 .row-calculator-right {
     text-align: right;
@@ -151,3 +148,7 @@ h1 {
     height: 100%;
 }
 
+.row-add > #calc-add {
+    width: 100%;
+    padding: 0px;
+}
