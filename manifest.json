@@ -24,6 +24,6 @@
     }
   ],
   "start_url": "/pf.html",
-  "display": "standalone",
+  "display": "fullscreen",
   "orientation": "portrait"
 }
