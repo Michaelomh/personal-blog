@@ -9,10 +9,14 @@
     <title>Personal Finance App</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" type="text/css">
     <link rel="stylesheet" href="/static/css/pf.css" type="text/css">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/static/img/Icon-57.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/Icon-72.png" />
@@ -21,110 +25,122 @@
 </head>
 
 <body>
-    <div class="containter-fluid">
-        <!--Topbar -->
-            <div class="row row-amount">
-                <div class="col-3" id="costIndicator">
-                    <i class="far fa-minus fa-2x" id="cost-minus"></i>
-                    <i class="far fa-plus fa-2x" id="cost-plus" style="display:none;"></i>
-                </div>  
-                <div class="col-9" id="costValue">
-                    <input type="number" step="any" class="form-control form-cost" id="cost" placeholder="Cost">
-                </div>
-            </div>
-
-        <!--Add Transactions View -->
-        <div class="row-container-add">
-            <div class="row">
-                <div class="col-12" id="costValue">
-                    <input type="text" class="form-control form-comment" id="comment" placeholder="comment">
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-6">
-                    <input type="text" class="form-control form-date" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" placeholder="DD/MM">
-                </div>
-                <div class="col-6">
-                    <input type="date" class="form-control form-date"  id="date" placeholder="HH:MM">
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-12" style="padding: 0px;">
-                    <div class="scrolling-wrapper">
-                        <img class="img-fluid category category-food" id="Food-Drinks" src="/static/img/pf/food.png">
-                        <img class="img-fluid category category-shopping" id="Shopping" src="/static/img/pf/shopping.png">
-                        <img class="img-fluid category category-trans" id="Transport" src="/static/img/pf/trans.png">
-                        <img class="img-fluid category category-entertain" id="Entertainment" src="/static/img/pf/enterin.png">
-                        <img class="img-fluid category category-house" id="Housing" src="/static/img/pf/hosuing.png">
-                        <img class="img-fluid category category-others" id="Others" src="/static/img/pf/others.png">
-                        <img class="img-fluid category category-cash" id="Income" src="/static/img/pf/csah.png">
-                    </div>
-                </div>
-            </div>
-
+    <div class="container-fluid">
+        <!--Title-->
+        <div class="row row-title">
+            <h1>
+                Add Transaction
+            </h1>
         </div>
-        
+
+        <!--Main Row-->
+        <div class="row row-mainRow">
+            <div class="col-3" id="costIndicator">
+                <h3>Add</h3>
+                <h2>SGD</h2>
+            </div>
+            <div class="col-9" id="costValue">
+                <span>3.00</span>
+            </div>
+        </div>
+
+        <!--Notes-->
+        <div class="row row-notes">
+            <div class="col" id="costValue">
+                <input type="text" class="form-control form-notes" id="notes" placeholder="notes">
+            </div>
+        </div>
+
+        <!--TimeStamp-->
+        <div class="row row-timeStamp">
+            <div class="col-6">
+                <input type="date" class="form-control form-date" id="date" placeholder="DD/MM">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control form-date" id="time" placeholder="HH:MM">
+            </div>
+        </div>
+
+        <!--Category-->
+        <div class="row row-category">
+            <div class="col" style="padding: 0px;">
+                <div class="scrolling-wrapper-x">
+                    <img class="img-fluid category category-shopping" id="Shopping" src="/static/img/pf/shopping.png">
+                    <img class="img-fluid category category-trans" id="Transport" src="/static/img/pf/trans.png">
+                    <img class="img-fluid category category-house" id="Housing" src="/static/img/pf/hosuing.png">
+                    <img class="img-fluid category category-others" id="Others" src="/static/img/pf/others.png">
+                    <img class="img-fluid category category-cash" id="Income" src="/static/img/pf/csah.png">
+                    <img class="img-fluid category category-food" id="Food-Drinks" src="/static/img/pf/food.png">
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-9">
-                <div class="row">
-                    <div class="col-4">
-                        7
+                <div class="row row-calculator">
+                    <div class="col-4 row-calculator-left">
+                        <p>7</p>
                     </div>
                     <div class="col-4">
-                        8
+                        <p>8</p>
                     </div>
-                    <div class="col-4">
-                        9
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        4
-                    </div>
-                    <div class="col-4">
-                        5
-                    </div>
-                    <div class="col-4">
-                        6
+                    <div class="col-4 row-calculator-right">
+                        <p>9</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-4">
-                        1
+                <div class="row row-calculator">
+                    <div class="col-4 row-calculator-left">
+                        <p>4</p>
                     </div>
                     <div class="col-4">
-                        2
+                        <p>5</p>
                     </div>
-                    <div class="col-4">
-                       3
+                    <div class="col-4 row-calculator-right">
+                        <p>6</p>
                     </div>
                 </div>
-                                <div class="row">
-                    <div class="col-4">
-                        .
+                <div class="row row-calculator">
+                    <div class="col-4 row-calculator-left">
+                        <p>1</p>
                     </div>
                     <div class="col-4">
-                        0
+                        <p>2</p>
+                    </div>
+                    <div class="col-4 row-calculator-right">
+                        <p>3</p>
+                    </div>
+                </div>
+                <div class="row row-calculator">
+                    <div class="col-4 row-calculator-left">
+                        <p>.</p>
                     </div>
                     <div class="col-4">
-                        &lt;
+                        <p>0</p>
+                    </div>
+                    <div class="col-4 row-calculator-right">
+                        <p>-</p>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="template-panel">
-                    Template1
-                    Template2
-                    Template3
+            <div class="col-3" style="padding: 0px;">
+                <div class="row row-templates">
+                    <div class="col" style="padding: 0px;">
+                        <img class="img-fluid category-shopping" id="Shopping" src="/static/img/pf/shopping.png">
+                        <img class="img-fluid category-trans" id="Transport" src="/static/img/pf/trans.png">
+                        <img class="img-fluid category-house" id="Housing" src="/static/img/pf/hosuing.png">
+                        <img class="img-fluid category-others" id="Others" src="/static/img/pf/others.png">
+                        <img class="img-fluid category-cash" id="Income" src="/static/img/pf/csah.png">
+                        <img class="img-fluid category-food" id="Food-Drinks" src="/static/img/pf/food.png">
+                    </div>
                 </div>
-                
-                <div class="add-panel">
-                    Add
+                <div class="row row-addButton">
+                    <div class="add-panel">
+                        Add
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 </body>
 
@@ -137,7 +153,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
     <script src="/static/js/pf.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
-    
+
 </footer>
 
 </html>

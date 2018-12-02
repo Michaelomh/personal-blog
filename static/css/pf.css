@@ -1,85 +1,48 @@
-/*
-Starting
-*/
+/*-------- Common Styles ------*/
 
 .row {
     font-family: 'Open Sans', sans-serif;
-    height: 12.5vh;
     margin-right: 0px;
     margin-left: 0px;
 }
 
-.row-amount{
-    height: 15vh;
-}
-
 .container-fluid {
+    background-color: #ffffff;
+    overflow: hidden;
+    padding-top 25px;
+    padding: 15px;
+}
+
+body {
     height: 100vh;
+    overflow: hidden;
 }
 
-
-.scrolling-wrapper {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    width: 100%;
-    height: 100%;
+h1 {
+    font-weight: bold;
+    letter-spacing: -2px;
+    margin: 0px auto;
 }
 
-.category {
-    display: inline-block;
-    height: 100%;
-}
+/*-------- Form Styles ------*/
 
 .form-control {
-    height: 99%;
+    height: 100%;
     text-align: right;
-    color: #3b3b3b;
     font-weight: bold;
     border: none;
+    background-color: transparent;
+    font-size: 3em;
+    color: #ffffff;
 }
 
-.form-date {
-    font-size: 2em;
+.form-control:hover {
+    text-align: left;
+    border: none;
+    background-color: transparent;
 }
 
-.form-item {
-    font-size: 2em;
-}
-
-#costIndicator {
-    color: #D64545;
-    font-size: 1.5em;
-    font-weight: bold;
-    line-height: 4;
-}
-
-.form-cost {
-    color: #D64545;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.card {
-    display: inline-block;
-    border: 1px solid white;
-    width: 150px;
-    height: 75px;
-    background: black;
-}
-
-.date-back,
-.date-forward {
-    font-size: 1.2em;
-    line-height: 5;
-}
-
-
--webkit-overflow-scrolling: touch;
-
-.scrolling-wrapper::-webkit-scrollbar {
-    display: none;
-}
+/*-------- Toastr Styles ------*/
 
 .toast > div {
     margin-left: 10px !important;
@@ -87,6 +50,104 @@ Starting
     width: calc(100% - 20px) !important;
 }
 
+
 #toast-container {
     margin-bottom: 15vh;
 }
+
+/*-------- Row Title Styles ------*/
+
+.row-title {
+    height: 7vh;
+}
+
+/*-------- Row MainRow Styles ------*/
+
+.row-mainRow {
+    height: 18vh;
+    background-color: darkgreen;
+    color: #ffffff;
+}
+
+/*-------- Row Notes Styles ------*/
+
+.row-notes {
+    height: 11vh;
+}
+
+/*-------- Row TimeStamp Styles ------*/
+
+.row-timeStamp {
+    height: 13vh;
+}
+
+/*-------- Row Categories Styles ------*/
+
+.row-category {
+    height: 11vh;
+}
+
+.category {
+    display: inline-block;
+    height: 100%;
+}
+
+
+-webkit-overflow-scrolling-x: touch;
+
+.scrolling-wrapper-x::-webkit-scrollbar {
+    display: none;
+}
+
+.scrolling-wrapper-x {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*-------- Row Calculator Styles ------*/
+
+.row-calculator {
+    height: 10vh;
+    text-align: center;
+}
+
+.row-calculator > div {}
+
+.row-calculator-right {
+    text-align: right;
+}
+
+.row-calculator-left {
+    text-align: left;
+}
+
+.row-calculator > div > p {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.5em;
+    line-height: 82px;
+    margin: 0px;
+}
+
+.row-templates {
+   height: 30vh; 
+    overflow-y: scroll;
+}
+
+-webkit-overflow-scrolling-y: touch;
+
+.scrolling-wrapper-y::-webkit-scrollbar {
+    display: none;
+}
+
+.scrolling-wrapper-y {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+}
+
