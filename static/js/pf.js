@@ -96,10 +96,26 @@ $(".row-category > .col-4 > button").click(function () {
     console.log(currentCategory);
 });
 
+//Select Template 
+$(".template").click(function() {
+    console.log("template clicked");
+    console.log(this.id);
+    switch(this.id) {
+    case "template-1":
+        console.log("template ONE");
+        break;
+    case "template-2":
+        console.log("template TWO");
+        break;
+    default:
+        toastr["error"]("Template not yet configured, please try again later.")
+}
+})
+
 //Add Transaction Function
 function addTransaction() {
     //get the number
-    let currentAmt = $("#transaction-amt").text()
+    let currentAmt = $("#transaction-amt").text();
 
     //get the date + time
     let day = $(".form-date").val().substr(0, $(".form-date").val().indexOf("/"))
