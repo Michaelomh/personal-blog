@@ -35,138 +35,58 @@
             </h1>
         </div>
 
-        <!--Main Row-->
-        <div class="row row-mainRow">
-            <div class="col-3">
-                <h3>Add</h3>
-                <h2>SGD</h2>
-            </div>
-            <div class="col-9">
-                <span id="transaction-amt">0</span>
-            </div>
-        </div>
-
-        <!--Notes-->
-        <div class="row row-notes">
-            <div class="col" id="costValue">
-                <input type="text" class="form-control form-notes" id="notes" placeholder="description">
-            </div>
-        </div>
-
         <!--TimeStamp-->
-        <div class="row row-timeStamp">
-            <div class="col-6">
-                <input type="text" class="form-control form-date" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" placeholder="DD/MM">
-            </div>
-            <div class="col-6">
-                <input type="text" class="form-control form-time" id="time" placeholder="HH:MM">
-            </div>
-        </div>
+        <form id="form" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off">
+            <input type="text" name="entry.1202591697" class="form-control" id="dateField" placeholder="DD/MM">
+            <input type="text" name="entry.988237308" class="form-control" id="timeField" placeholder="HH:MM">
+            <input type="text" name="entry.1387302766" class="form-control" id="amtField" placeholder="Amount">
+            <input type="text" name="entry.1764327740" class="form-control" id="typeField" placeholder="Income or Expenses">
+            <input type="text" name="entry.1199091773" class="form-control" id="userField" placeholder="Sherry or Michael">
+            <input type="text" name="entry.961656414" class="form-control" id="descField" placeholder="description">
+            <button id="send" type="submit" class="common_btn">Test Send</button>
+        </form>
 
-        <!--Category-->
-        <div class="row row-category">
-            <div class="col-4">
-                <button type="button" class="btn btn-active btn-outline-secondary">Food</button>
-            </div>
-            <div class="col-4">
-                <button type="button" class="btn btn-outline-secondary">Transport</button>
-            </div>
-            <div class="col-4">
-                <button type="button" class="btn btn-outline-secondary">Holidays</button>
-            </div>
-        </div>
-
-        <div class="row row-category">
-            <div class="col-4">
-                <button type="button" class="btn btn-outline-secondary">Activities</button>
-            </div>
-            <div class="col-4">
-                <button type="button" class="btn btn-outline-secondary">Shopping</button>
-            </div>
-            <div class="col-4">
-                <button type="button" class="btn btn-outline-secondary">Others</button>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-9">
-                <div class="row row-calculator">
-                    <div id="calc-7" class="col-4 ">
-                        <p>7</p>
-                    </div>
-                    <div id="calc-8" class="col-4">
-                        <p>8</p>
-                    </div>
-                    <div id="calc-9" class="col-4 ">
-                        <p>9</p>
-                    </div>
-                </div>
-                <div class="row row-calculator">
-                    <div id="calc-4" class="col-4 ">
-                        <p>4</p>
-                    </div>
-                    <div id="calc-5" class="col-4">
-                        <p>5</p>
-                    </div>
-                    <div id="calc-6" class="col-4 ">
-                        <p>6</p>
-                    </div>
-                </div>
-                <div class="row row-calculator">
-                    <div id="calc-1" class="col-4 ">
-                        <p>1</p>
-                    </div>
-                    <div id="calc-2" class="col-4">
-                        <p>2</p>
-                    </div>
-                    <div id="calc-3" class="col-4 ">
-                        <p>3</p>
-                    </div>
-                </div>
-                <div class="row row-calculator">
-                    <div id="calc-dot" class="col-4 ">
-                        <p>.</p>
-                    </div>
-                    <div id="calc-0" class="col-4">
-                        <p>0</p>
-                    </div>
-                    <div id="calc-del" class="col-4 ">
-                        <p>-</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3" style="padding: 0px;">
-                <div class="row row-templates">
-                    <div class="col" style="padding: 0px;">
-                        <img class="img-fluid template" id="template-1" src="/static/img/pf/shopping.png">
-                        <img class="img-fluid template" id="template-2" src="/static/img/pf/trans.png">
-                        <img class="img-fluid template" id="template-3" src="/static/img/pf/hosuing.png">
-                        <img class="img-fluid template" id="template-4" src="/static/img/pf/others.png">
-                        <img class="img-fluid template" id="template-5" src="/static/img/pf/csah.png">
-                        <img class="img-fluid template" id="template-6" src="/static/img/pf/food.png">
-                    </div>
-                </div>
-                <div class="row row-add row-calculator">
-                    <div id="calc-add" class="col-4">
-                        <p>Add</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     </div>
 </body>
 
+<Script>
+    function postToGoogle() {
+        var dateField = $("#dateField").val();
+        var timeField = $("#timeField").val();
+        var amtField = $("#amtField").val();
+        var typeField = $("#typeField").val();
+        var userField = $("#userField").val();
+        var descField = $("#descField").val();
+
+        $.ajax({
+            url: "https://docs.google.com/forms/d/e/1FAIpQLScJ-BLUsMlbVcb7Z_aIeak2UpL7R5b-Udj6ECDJ_reexYDFjQ/formResponse?",
+            data: {
+                "entry.1202591697": dateField,
+                "entry.988237308": timeField,
+                "entry.1387302766": amtField,
+                "entry.1764327740": typeField,
+                "entry.1199091773": userField,
+                "entry.961656414": descField
+            },
+            type: "POST",
+            dataType: "xml",
+            success: function(d) {},
+            error: function(x, y, z) {
+                alert("not supposed to happen")
+            }
+        });
+        return false;
+    }
+
+</Script>
+
 
 <footer>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
     <script src="/static/js/pf.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
-
 </footer>
 
 </html>
