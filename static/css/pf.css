@@ -18,7 +18,7 @@ body {
     overflow: hidden;
 }
 
-h1 {
+h3 {
     font-weight: bold;
     letter-spacing: -2px;
     margin: 0px auto;
@@ -31,9 +31,7 @@ h1 {
 /*-------- Form Styles ------*/
 
 .form-control {
-    height: 100%;
     text-align: center;
-    font-weight: bold;
     border: none;
     background-color: transparent;
     font-size: 2em;
@@ -68,122 +66,4 @@ h1 {
 
 .row-title {
     height: 7vh;
-}
-
-/*-------- Row MainRow Styles ------*/
-
-.row-mainRow {
-    height: 18vh;
-    background-color: #27ae60;
-    color: #ffffff;
-    border-radius: 5px;
-    margin: 0px 15px;
-}
-
-.row-mainRow > .col-9{
-    text-align: right;
-}
-
-#transaction-amt{
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 4em;
-    line-height: 3em;
-}
-
-/*-------- Row Notes Styles ------*/
-
-.row-notes {
-    height: 7vh;
-}
-
-/*-------- Row TimeStamp Styles ------*/
-
-.row-timeStamp {
-    height: 8vh;
-}
-
-
-/*-------- Row Categories Styles ------*/
-
-.row-category {
-    height: 7vh;
-}
-
-.row-category > .col-4 {
-    padding-top: 15px;
-}
-
-
--webkit-overflow-scrolling-x: touch;
-
-.scrolling-wrapper-x::-webkit-scrollbar {
-    display: none;
-}
-
-.scrolling-wrapper-x {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    width: 100%;
-    height: 100%;
-}
-
-.btn-active,
-.btn-active:hover,
-.btn-active:active,
-.btn-active:focus {
-    color: #fff !important;
-    background-color: #27ae60 !important;
-    border-color: #27ae60 !important;
-    box-shadow: none !important;
-}
-
-.btn-outline-secondary {
-    color: #27ae60;
-    background-color: transparent;
-    background-image: none;
-    border: 2px solid #27ae60;
-    border-radius: 5px;
-}
-
-
-/*-------- Row Calculator Styles ------*/
-
-.row-calculator {
-    height: 11vh;
-    text-align: center;
-}
-
-.row-calculator > div > p {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1.5em;
-    line-height: 82px;
-    margin: 0px;
-}
-
-.row-templates {
-    height: 30vh;
-    overflow-y: scroll;
-    margin-top: 20px;
-    padding-right: 15px;
-}
-
--webkit-overflow-scrolling-y: touch;
-
-.scrolling-wrapper-y::-webkit-scrollbar {
-    display: none;
-}
-
-.scrolling-wrapper-y {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    white-space: nowrap;
-    width: 100%;
-    height: 100%;
-}
-
-.row-add > #calc-add {
-    width: 100%;
-    padding: 0px;
 }
