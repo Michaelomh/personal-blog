@@ -2,192 +2,99 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Personal Finance App</title>
+  <title>Personal Finance App</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" type="text/css">
-    <link rel="stylesheet" href="/static/css/pf.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" type="text/css">
+  <link rel="stylesheet" href="/static/css/pf.css" type="text/css">
 
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="/manifest.json">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/static/img/Icon-57.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/static/img/Icon-72.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/static/img/Icon-114.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/Icon-144.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/img/Icon-57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/img/Icon-72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/img/Icon-114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/img/Icon-144.png" />
 </head>
 
 <!--
 List of things to do
 1. Error Validation for empty fields
+    date and time must be of certain format.
 2. Better Button group control
-3. Link google responses form to google sheets, alter date
-4. Include Past transactions
+5. Alter the add transaction to make it more beautiful.
+6. reset afterwards
+7. do a check after every 10 seconds. and if there is a change, update everything
+8. change description to a textbox
+9. 
 -->
 
 <body>
-    <div class="container-fluid">
-        <!--Title-->
-        <div class="row row-title">
-            <h3>Add Transaction</h3>
-        </div>
-        <form class="row row-form" id="form" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off">
-
-            <input type="text" name="entry.1202591697" class="form-control form-date" id="dateField" placeholder="DD/MM">
-            <input type="text" name="entry.988237308" class="form-control form-time" id="timeField" placeholder="HH:MM">
-
-            <input type="text" name="entry.1387302766" class="form-control" id="amtField" placeholder="Amount">
-
-            <div class="btn-group btn-block" data-toggle="button" name="entry.1764327740" role="group" id="typeField" aria-label="Basic example">
-                <button type="button" class="btn btn-secondary">Income</button>
-                <button type="button" class="btn btn-secondary">Expenses</button>
-            </div>
-
-            <div class="btn-group btn-block" data-toggle="button" name="entry.1199091773" role="group" id="userField" aria-label="Basic example">
-                <button type="button" class="btn btn-default">Sherry</button>
-                <button type="button" class="btn btn-default">Michael</button>
-            </div>
-
-            <input type="text" name="entry.961656414" class="form-control" id="descField" placeholder="description">
-
-            <button id="send" type="submit" class="btn btn-primary btn-block">Test Send</button>
-        </form>
+  <div class="container-fluid">
+    <!--Title-->
+    <div class="row row-title">
+      <h3>Add Transaction</h3>
     </div>
+    <form class="row row-form" id="form" target="_self" onsubmit="submitTransaction();" action="" autocomplete="off">
 
-    <div class="container-fluid">
-        <div class="row">
-            <h3>Past Transactions</h3>
-            <table class="table table-sm">
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Amount</th>
-                        <th scope="col">Type</th>
-                        <th scope="col">Comments</th>
-                    </tr>
-                </thead>
-                <tbody class="table-transactions">
+      <input type="text" name="entry.1202591697" class="form-control form-date" id="dateField" placeholder="DD/MM">
+      
+      <input type="number" name="entry.1387302766" class="form-control" id="amtField" placeholder="Amount">
 
-                </tbody>
-            </table>
-        </div>
+      <div class="btn-group btn-block" data-toggle="button" name="entry.1764327740" role="group" id="typeField" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">Income</button>
+        <button type="button" class="btn btn-secondary">Expenses</button>
+      </div>
+
+      <div class="btn-group btn-block" data-toggle="button" name="entry.1199091773" role="group" id="userField" aria-label="Basic example">
+        <button type="button" class="btn btn-default">Sherry</button>
+        <button type="button" class="btn btn-default">Michael</button>
+      </div>
+
+      <input type="text" name="entry.961656414" class="form-control" id="descField" placeholder="description">
+
+      <button id="send" type="submit" class="btn btn-primary btn-block">Test Send</button>
+    </form>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12" style="text-align: center; margin-bottom: 15px">
+        <h3>Recent Transactions</h3>
+      </div>
+      <div class="col-sm-12" style=" height: 200px; overflow: auto;padding: 0px;">
+        <table cellspacing="0" class="table table-sm" style="font-size:0.8rem; ">
+          <thead>
+            <tr>
+              <th style="width: 18%; text-align: left">Date</th>
+              <th style="width: 20%; text-align: left">Amt.</th>
+              <th style="width: 12%; text-align: center">Type</th>
+              <th style="width: 50%">Comments/Location</th>
+            </tr>
+          </thead>
+          <tbody class="table-transactions">
+
+          </tbody>
+        </table>
+      </div>
     </div>
+  </div>
 </body>
 
-
-
-
 <footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
-    <script src="/static/js/pf.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+  <script src="/static/js/pf.js"></script>
 </footer>
-
-<Script>
-    //Global variables
-    let userField = ''
-    let typeField = ''
-
-    $(document).ready(function() {
-        console.log("retrieving from google")
-        retrieveFromGoogle()
-    });
-
-    toastr.options = {
-        "closeButton": true,
-        "debug": false,
-        "newestOnTop": false,
-        "progressBar": false,
-        "positionClass": "toast-bottom-full-width",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "5000",
-        "extendedTimeOut": "1000"
-    }
-
-
-    $("#typeField > button.btn").click(function() {
-        typeField = this.innerHTML
-        console.log(typeField)
-    });
-
-    $("#userField > button.btn").click(function() {
-        userField = this.innerHTML
-        console.log(userField)
-
-    });
-
-
-    function postToGoogle() {
-        var dateField = $("#dateField").val();
-        var timeField = $("#timeField").val();
-        var amtField = $("#amtField").val();
-        var descField = $("#descField").val();
-        console.log('dateField= ' + dateField)
-        console.log('timeField= ' + timeField)
-        console.log('amtField= ' + amtField)
-        console.log('typeField= ' + typeField)
-        console.log('userField= ' + userField)
-        console.log('descField= ' + descField)
-        let message = dateField + timeField + ' ' + amtField + ' ' + typeField + ' ' + userField + ' ' + descField
-        //        toastr["success"](message, "Added Transaction:")
-
-        $.ajax({
-            url: "https://docs.google.com/forms/d/e/1FAIpQLScJ-BLUsMlbVcb7Z_aIeak2UpL7R5b-Udj6ECDJ_reexYDFjQ/formResponse?",
-            data: {
-                "entry.1202591697": dateField,
-                "entry.988237308": timeField,
-                "entry.1387302766": amtField,
-                "entry.1764327740": typeField,
-                "entry.1199091773": userField,
-                "entry.961656414": descField
-            },
-            type: "POST",
-            dataType: "xml",
-            success: function(d) {
-                alert('SUCCESS')
-            },
-            error: function(x, y, z) {
-                toastr["success"](message, "Added Transaction:")
-            }
-        });
-        return false;
-    }
-
-    //retrieve data
-    function retrieveFromGoogle() {
-        const sheetId = '1ATRPbe_RUS0rjJ2d1glCuVRsm6reql0zZIKbwvqBvEA'
-        var url = "https://spreadsheets.google.com/feeds/list/" + sheetId + "/od6/public/values?alt=json";
-
-        $.getJSON(url, function(data) {
-            var entries = data.feed.entry;
-            entries.slice().reverse().forEach(function(entry) {
-                console.log(entry.gsx$date.$t)
-                console.log(entry.gsx$amount.$t)
-                console.log(entry.gsx$type.$t)
-                console.log(entry.gsx$user.$t)
-                console.log(entry.gsx$comments.$t)
-                $('.table-transactions').append("<tr><td>" + entry.gsx$date.$t +
-                    "</td><td>" + entry.gsx$amount.$t +
-                    "</td><td>" + entry.gsx$type.$t +
-                    "</td><td>" + entry.gsx$comments.$t +
-                    "</td></tr>");
-            });
-        });
-    }
-
-</Script>
 
 </html>
