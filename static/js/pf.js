@@ -9,8 +9,8 @@ toastr.options = {
   "debug": false,
   "newestOnTop": false,
   "progressBar": false,
-  "positionClass": "toast-bottom-full-width",
-  "preventDuplicates": false,
+  "positionClass": "toast-top-full-width",
+  "preventDuplicates": true,
   "onclick": null,
   "showDuration": "300",
   "hideDuration": "1000",
@@ -43,12 +43,21 @@ $("#typeField > button.btn").click(function () {
   typeField = this.innerHTML
 });
 
-$("#userField > button.btn").click(function () {
-  userField = this.innerHTML
+$(".userField").click(function () {
+  userField = this.innerHTML.split(" ")[1];
+  console.log("send transactions here with " + userField)
 });
 
 $("#amtField").keyup(function () {
   let currentAmt = $('#amtField').val()
+  let newInput = currentAmt.substr(currentAmt.length - 1, currentAmt.length)
+  //check number
+  if (!newInput.match(/[0-9.]/g)) {
+    $('#amtField').val(currentAmt.substr(0, currentAmt.length - 1))
+    toastr["error"]("Please input a number(0-9)", "Failure:")
+  }
+
+  //check decimal
   if (currentAmt.match(/[.]/g)) {
     if (currentAmt.match(/[.].*/)[0].length > 3) {
       $('#amtField').val(currentAmt.substr(0, currentAmt.length - 1))
@@ -74,7 +83,7 @@ $(document).ready(function () {
   //populate time
   /*  let hour = (today.getHours() < 10 ? '0' + today.getHours() : today.getHours());
     let minute = (today.getMinutes() < 10 ? '0' + today.getMinutes() : today.getMinutes());*/
-//  $(".form-time").val(hour + ":" + minute);
+  //  $(".form-time").val(hour + ":" + minute);
 
   $(".form-date").val(day + "/" + month);
 
@@ -88,7 +97,7 @@ function retrievePastTransactions() {
 
   $.getJSON(url, function (data) {
     var entries = data.feed.entry;
-    let maxRows  = 5
+    let maxRows = 5
     let currentRows = 0
     entries.slice().reverse().forEach(function (entry) {
       let rowStyle = entry.gsx$user.$t === 'Michael' ? 'table-warning' : 'table-primary'
@@ -105,15 +114,15 @@ function retrievePastTransactions() {
   });
 }
 
-function submitTransaction() {
-  event.preventDefault();
+$("#sendTransaction").click(function () {
   sendTransaction();
-}
+})
+
 
 function sendTransaction() {
   let hour = (today.getHours() < 10 ? '0' + today.getHours() : today.getHours());
   let minute = (today.getMinutes() < 10 ? '0' + today.getMinutes() : today.getMinutes());
-  
+
   var dateField = $("#dateField").val() + "/" + today.getFullYear()
   var timeField = hour + ":" + minute + ":00";
   var amtField = $("#amtField").val();

@@ -1,72 +1,61 @@
 /*-------- Common Styles ------*/
 
 .row {
-    font-family: 'Open Sans', sans-serif;
-    margin-right: 0px;
-    margin-left: 0px;
-}
-
-.container-fluid {
-    background-color: #ffffff;
-    overflow: hidden;
-    padding: 15px;
-    padding-top: 25px;
+  font-family: 'Open Sans', sans-serif;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 body {
-    height: 100vh;
-    overflow: hidden;
-}
-
-h3 {
-    font-weight: bold;
-    letter-spacing: 3px;;
-    margin: 0px auto;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .btn {
-    width: 100%;
+  width: 100%;
+  font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+  margin: 20px;
+  width: auto;
+  border: 2px solid #f8f8f8;
+  padding: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 9px 13px 18px -15px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 9px 13px 18px -15px rgba(0, 0, 0, 0.5);
+  box-shadow: 9px 13px 18px -15px rgba(0, 0, 0, 0.5);
 }
 
 /*-------- Form Styles ------*/
 
 .form-control {
-    text-align: center;
-    border: none;
-    background-color: transparent;
-    font-size: 2em;
-    border-radius: 0px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2em;
+  border-radius: 0px;
 }
 
 .form-control:hover {
-    text-align: center;
-    border: none;
-    background-color: transparent;
+  text-align: center;
+  border: none;
+  background-color: transparent;
 }
 
 .form-control:focus {
-    box-shadow: none;
-    border-bottom: 2px solid green;
+  box-shadow: none;
+  border-bottom: 2px solid green;
 }
 
 /*-------- Toastr Styles ------*/
 
-.toast > div {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
-    width: calc(100% - 20px) !important;
-}
-
-
-#toast-container {
-    margin-bottom: 15vh;
+.toast {
+  margin-top: 20px !important;
 }
 
 /*-------- Row Title Styles ------*/
-
-.row-title {
-    height: 7vh;
-}
 
 .table-align-center {
   text-align: center;
@@ -76,7 +65,11 @@ h3 {
   text-align: left;
 }
 
-
 .table-align-right {
   text-align: right;
+}
+
+/*-------- Add Transactions Styles ------*/
+.userField {
+  text-transform: uppercase;
 }
