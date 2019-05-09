@@ -88,15 +88,18 @@ function retrievePastTransactions() {
 
   $.getJSON(url, function (data) {
     var entries = data.feed.entry;
+    let maxRows  = 5
+    let currentRows = 0
     entries.slice().reverse().forEach(function (entry) {
       let rowStyle = entry.gsx$user.$t === 'Michael' ? 'table-warning' : 'table-primary'
-      if (entry.gsx$amount.$t.length > 0) {
+      if (entry.gsx$amount.$t.length > 0 && currentRows < maxRows) {
         $('.table-transactions').append(
           "<tr class='" + rowStyle + "'><td>" + entry.gsx$date.$t.substr(0, 6) +
           "</td><td class='table-align-left'>" + entry.gsx$amount.$t +
           "</td><td class='table-align-center'>" + (entry.gsx$type.$t === 'Income' ? 'I' : 'E') +
           "</td><td class='table-align-left'>" + entry.gsx$comments.$t +
           "</td></tr>");
+        currentRows++;
       }
     });
   });
