@@ -12,8 +12,6 @@ body {
 }
 
 .btn {
-  width: 100%;
-  font-weight: 100;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -26,6 +24,16 @@ body {
   -webkit-box-shadow: 9px 13px 18px -15px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 9px 13px 18px -15px rgba(0, 0, 0, 0.5);
   box-shadow: 9px 13px 18px -15px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+
+.col-full {
+  padding: 0px;
 }
 
 /*-------- Form Styles ------*/
@@ -57,19 +65,48 @@ body {
 
 /*-------- Row Title Styles ------*/
 
-.table-align-center {
+.tac {
   text-align: center;
 }
 
-.table-align-left {
+.tal {
   text-align: left;
 }
 
-.table-align-right {
+.tar {
   text-align: right;
 }
 
 /*-------- Add Transactions Styles ------*/
 .userField {
   text-transform: uppercase;
+}
+
+.btn-misc {
+  float: right;
+  padding: 2px 10px;
+}
+
+.btn-user {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+/*-------- recent Transactions Styles ------*/
+.table-transactions {
+  border: 1px solid grey;
+  border-radius: 6px;
+}
+
+.table-xs {
+  margin: 0px;
+  border-bottom: 1px solid grey;
+  font-size: 0.8rem;
+}
+
+.table-xs tr td {
+  padding: 0px;
+  border-top: none;
 }

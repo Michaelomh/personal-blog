@@ -74,6 +74,19 @@ $("#descField").keyup(function () {
   }
 });
 
+/*Misc Function*/
+//Google Sheets
+$("#btn-sheets").click(function () {
+  console.log("opening Google sheets...")
+  location.href = "https://docs.google.com/spreadsheets/d/1ATRPbe_RUS0rjJ2d1glCuVRsm6reql0zZIKbwvqBvEA/edit#gid=0";
+})
+
+//Sync
+$("#btn-sync").click(function () {
+  console.log("Syncing now...")
+  retrievePastTransactions();
+})
+
 /*Ready*/
 $(document).ready(function () {
   //populate date
@@ -100,14 +113,17 @@ function retrievePastTransactions() {
     let maxRows = 5
     let currentRows = 0
     entries.slice().reverse().forEach(function (entry) {
-      let rowStyle = entry.gsx$user.$t === 'Michael' ? 'table-warning' : 'table-primary'
       if (entry.gsx$amount.$t.length > 0 && currentRows < maxRows) {
         $('.table-transactions').append(
-          "<tr class='" + rowStyle + "'><td>" + entry.gsx$date.$t.substr(0, 6) +
-          "</td><td class='table-align-left'>" + entry.gsx$amount.$t +
-          "</td><td class='table-align-center'>" + (entry.gsx$type.$t === 'Income' ? 'I' : 'E') +
-          "</td><td class='table-align-left'>" + entry.gsx$comments.$t +
-          "</td></tr>");
+          "<table class='table table-xs'><tr><td>" +
+          entry.gsx$comments.$t +
+          "</td><td class='tar'>" +
+          (entry.gsx$type.$t === 'Income' ? '+' : '-') + entry.gsx$amount.$t +
+          "</td></tr><tr><td>" +
+          entry.gsx$date.$t.substr(0, 6) +
+          "</td><td class='tar'>" +
+          entry.gsx$user.$t +
+          "</td></tr></table>");
         currentRows++;
       }
     });
