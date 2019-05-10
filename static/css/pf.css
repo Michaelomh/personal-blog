@@ -12,7 +12,7 @@ body {
 }
 
 .btn {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container-fluid {
@@ -78,6 +78,7 @@ body {
 }
 
 /*-------- Add Transactions Styles ------*/
+
 .userField {
   text-transform: uppercase;
 }
@@ -87,14 +88,46 @@ body {
   padding: 2px 10px;
 }
 
-.btn-user {
+.btn-user,
+.btn-type {
   width: 100%;
   text-transform: uppercase;
-  font-weight: bold;
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
+#btn-income {
+  background-color: #2ecc71;
+  border: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-left: 4px solid #ffffff;
+}
+
+#btn-expenses {
+  background-color: #e74c3c;
+  border: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-left: 4px solid #ffffff;
+}
+
+#btn-sherry {
+  background-color: #3498db;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-right: 4px solid #ffffff;
+}
+
+#btn-michael {
+  background-color: #3498db;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-left: 4px solid #ffffff;
+}
 
 /*-------- recent Transactions Styles ------*/
+
 .table-transactions {
   border: 1px solid grey;
   border-radius: 6px;
@@ -109,4 +142,30 @@ body {
 .table-xs tr td {
   padding: 0px;
   border-top: none;
+}
+
+.ta-comments {
+  font-weight: bold;
+}
+
+.ta-date {
+  font-style: italic;
+}
+
+.ta-income {
+  color: #2ecc71;
+}
+
+
+.ta-expense {
+  color: #e74c3c;
+}
+
+
+.ta-sherry {
+  
+}
+
+.ta-michael {
+  
 }
