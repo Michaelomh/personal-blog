@@ -183,10 +183,14 @@ function sendTransaction() {
   let hour = (today.getHours() < 10 ? '0' + today.getHours() : today.getHours());
   let minute = (today.getMinutes() < 10 ? '0' + today.getMinutes() : today.getMinutes());
 
-  var dateField = $("#dateField").val() + "/" + today.getFullYear()
+  var dateField = unformatDate($("#dateField").val()) + "/" + today.getFullYear()
+  
   var timeField = hour + ":" + minute + ":00";
   var amtField = $("#amtField").val();
   var descField = $("#descField").val();
+  typeField = typeField.toLowerCase().charAt(0).toUpperCase() + typeField.toLowerCase().substring(1);
+
+  
   let message = dateField + ' ' + timeField + ' ' + amtField + ' ' + typeField + ' ' + userField + ' ' + descField
 
   if (validateSubmit(dateField, timeField, amtField)) {
