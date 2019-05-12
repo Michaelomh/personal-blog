@@ -102,6 +102,7 @@ body {
   -webkit-transition: all 1s;
   transition: all 1s;
   border-left: 4px solid #ffffff;
+  filter: grayscale(100%);
 }
 
 #btn-expenses {
@@ -110,6 +111,7 @@ body {
   -webkit-transition: all 1s;
   transition: all 1s;
   border-left: 4px solid #ffffff;
+  filter: grayscale(0%);
 }
 
 #btn-sherry {
@@ -162,10 +164,6 @@ body {
 }
 
 
-.ta-sherry {
-  
-}
+.ta-sherry {}
 
-.ta-michael {
-  
-}
+.ta-michael {}
