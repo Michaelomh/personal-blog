@@ -39,7 +39,7 @@ List of things to do
 -->
 
 <body>
-    <div class="container-fluid add-transaction-container">
+  <div class="container-fluid add-transaction-container">
     <!--Title-->
     <div class="row row-title" style="padding-bottom: 6px;">
       <div class="col-9 col-full">
@@ -52,7 +52,7 @@ List of things to do
       </div>
     </div>
 
-    <div class="btn-group btn-block" data-toggle="button" name="entry.1764327740" role="group" id="typeField" aria-label="Basic example">
+    <div class="btn-group btn-block" data-toggle="button" name="entry.1764327740" role="group" id="typeField">
       <button type="button" style="width: 100%" class="btn btn-type" id="btn-income">INCOME</button>
       <button type="button" style="width: 100%" class="btn btn-type" id="btn-expenses">EXPENSE</button>
     </div>
@@ -63,7 +63,7 @@ List of things to do
 
     <input type="text" name="entry.961656414" class="form-control" id="descField" placeholder="Description">
 
-    <div class="btn-group btn-block" data-toggle="button" name="entry.1199091773" role="group" id="userField" aria-label="Basic example">
+    <div class="btn-group btn-block" data-toggle="button" name="entry.1199091773" role="group" id="userField">
       <button type="button" class="btn btn-user" id="btn-sherry">
         <i class="fas fa-chevron-left"></i>
           &nbsp;&nbsp;&nbsp;&nbsp;Sherry
@@ -76,8 +76,26 @@ List of things to do
 
 
     <button id="sendTransaction" type="submit" class="btn btn-primary btn-block">Submit Transaction</button>
+    
+    
+      <div class="btn-group btn-block btn-templates" data-toggle="button" id="btn-templates" role="group">
+        <button type="button" style="width: 100%" class="btn btn-template" id="template-1">
+          <i class="fas fa-shopping-basket"></i>
+        </button>
+        <button type="button" style="width: 100%" class="btn btn-secondary" id="template-2">
+          <i class="fas fa-utensils-alt"></i>
+        </button>
+        <button type="button" style="width: 100%" class="btn btn-template" id="template-3">
+          <i class="far fa-beer"></i>
+          
+        </button>
+        <button type="button" style="width: 100%" class="btn btn-secondary" id="template-4">
+          <i class="fas fa-home"></i>
+        </button>
+      </div>
+    
   </div>
-  
+
   <div class="container-fluid">
     <div class="row row-title" style="padding-bottom: 6px;">
       <div class="col-9 col-full">
@@ -94,7 +112,7 @@ List of things to do
       </div>
     </div>
   </div>
-  
+
 </body>
 
 <footer>

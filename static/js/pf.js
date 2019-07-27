@@ -132,6 +132,22 @@ $("#btn-sync").click(function () {
   retrievePastTransactions();
 })
 
+$("#template-1").click(function () {
+  $('#descField').val("Groceries");
+})
+
+$("#template-2").click(function () {
+  $('#descField').val("Hawker");
+})
+
+$("#template-3").click(function () {
+  $('#descField').val("Bar/Restaurant");
+})
+
+$("#template-4").click(function () {
+  $('#descField').val("Home Expenses");
+})
+
 /*Ready*/
 $(document).ready(function () {
   //populate date
