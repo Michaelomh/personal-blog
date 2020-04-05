@@ -5,15 +5,7 @@
 		"image": "ellipsisC5.jpg",
 		"url": "https://michaelomh.github.io/Ellipsis-Challenge-Q5/index.html",
 		"date": "July 2018",
-		"tags": ["Development"]
-	},
-    {
-		"slug": "",
-        "name": "thementoringcircle.org",
-		"image": "TMC_Project.jpg",
-		"url": "http://thementoringcircle.org",
-		"date": "May 2018",
-		"tags": ["Development"]
+		"tags": ["Front-End Dev"]
 	},
     {
 		"slug": "",
@@ -21,7 +13,7 @@
 		"image": "Datayse_Project.jpg",
 		"url": "http://www.datayse.com",
 		"date": "Jan 2018",
-		"tags": ["Development"]
+		"tags": ["Front-End Dev"]
 	}, 
     {
 		"slug": "SA-instagram",
@@ -29,7 +21,7 @@
 		"image": "social-analytics-project.jpg",
 		"url": "../my_projects/2017/11/15/SA-Social-Media-Strategies-in-Instagram.html",
 		"date": "Jan 2018",
-		"tags": ["Data Science", "Data Analytics"]
+		"tags": ["Data Analytics"]
 	}, 
     {
 		"slug": "DS-forecast",
@@ -37,7 +29,7 @@
 		"image": "TimeSeries-Forecasting.jpg",
 		"url": "../my_projects/2017/04/27/DWBA-predicting-elderly-bathoom-activity.html",
 		"date": "Jan 2018",
-		"tags": ["Data Science", "Data Engineering", "Data Analytics"]
+		"tags": ["Data Analytics"]
 	},
     {
 		"slug": "",
@@ -45,7 +37,7 @@
 		"image": "VA-SMUBIA.jpg",
 		"url": "../my_projects/2017/08/12/SMUBIA-Live-Analytics-Dashboard.html",
 		"date": "Aug 2017",
-		"tags": ["Data Analytics", "Development"]
+		"tags": ["Data Analytics", "Front-End Dev"]
 	}, 
     {
 		"slug": "",
@@ -53,7 +45,7 @@
 		"image": "iot-project.jpg",
 		"url": "../my_projects/2017/04/10/IOT-shoppingcart-Dashboard.html",
 		"date": "Apr 2017 ",
-		"tags": ["Data Analytics", "Development"]
+		"tags": ["Data Analytics", "Front-End Dev"]
 	}, 
     {
 		"slug": "VA-flights",
@@ -61,13 +53,13 @@
 		"image": "VA_project.jpg",
 		"url": "../my_projects/2017/01/29/Visualising-Passengers-within-US-in-2015.html",
 		"date": "Jan 2017",
-		"tags": ["Data Analytics", "Development"]
+		"tags": ["Data Analytics", "Front-End Dev"]
 	}, {
 		"slug": "ZG-Showcase",
         "name": "Zeguestlist Showcase",
 		"image": "Zeguestlist_Showcase.jpg",
 		"url": "../my_projects/2016/08/01/Zeguestlist-Showcase.html",
 		"date": "Aug 2016",
-		"tags": ["Data Analytics", "Development"]
+		"tags": ["Data Analytics", "Front-End Dev", "Back-End Dev"]
 	}
 ]

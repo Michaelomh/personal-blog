@@ -1,4 +1,0 @@
-- Show Day-Month
-- Show Hour Min
-- Food, Transport, Shopping, Holidays, Others, Recreation
-

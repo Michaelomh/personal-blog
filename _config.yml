@@ -3,7 +3,7 @@ description: Datayse
 author: Michael Ong
 author_long: Michael Ong Ming Hao
 github: https://github.com/Michaelomh
-about: Michael's Journey with Data
+about: Michael's Adventures with Code
 
 enableTags: true
 tagarray: []
@@ -14,22 +14,22 @@ collections:
     permalink: /project/:path/
 
 social:
-    - icon: fa-linkedin-square
+    - icon: fa-linkedin
       link: "https://www.linkedin.com/in/michaelomh/"
-    - icon: fa-github-alt
+    - icon: fa-github
       link: "https://github.com/Michaelomh"
-    - icon: fa-bar-chart
+    - icon: fa-area-chart
       link: "https://public.tableau.com/profile/ong.ming.hao#!/"
-    - icon: fa-envelope
-      link: "mailto:minghao.ong.2014@sis.smu.edu.sg?Subject=Hello"
+#    - icon: fa-medium
+#      link: "mailto:minghao.ong.2014@sis.smu.edu.sg?Subject=Hello"
 
 urls:
-    - text: About
+    - text: About Me
       url: /about/
-    - text: Blog
-      url: /blog/
     - text: Projects
       url: /projects/
+    - text: Timeline
+      url: /timeline/
     - text: Search
       url: /search/
 

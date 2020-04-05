@@ -92,24 +92,6 @@ $("#userField > button.btn").click(function () {
   }
 });
 
-$("#amtField").keyup(function () {
-  let currentAmt = $('#amtField').val()
-  let newInput = currentAmt.substr(currentAmt.length - 1, currentAmt.length)
-  //check number
-  if (!newInput.match(/[0-9.]/g)) {
-    $('#amtField').val(currentAmt.substr(0, currentAmt.length - 1))
-    toastr["error"]("Please input a number(0-9)", "Failure:")
-  }
-
-  //check decimal
-  if (currentAmt.match(/[.]/g)) {
-    if (currentAmt.match(/[.].*/)[0].length > 3) {
-      $('#amtField').val(currentAmt.substr(0, currentAmt.length - 1))
-      toastr["error"]("Cannot add a number that has more than 2 decimal place ", "Failure:")
-    }
-  }
-});
-
 $("#descField").keyup(function () {
   let currentDesc = $('#descField').val()
   if (currentDesc.length > 50) {
@@ -121,7 +103,6 @@ $("#descField").keyup(function () {
 /*Misc Function*/
 //Google Sheets
 $("#btn-sheets").click(function () {
-  console.log("opening Google sheets...")
   location.href = "https://docs.google.com/spreadsheets/d/1ATRPbe_RUS0rjJ2d1glCuVRsm6reql0zZIKbwvqBvEA/edit#gid=0";
 })
 
@@ -141,11 +122,16 @@ $("#template-2").click(function () {
 })
 
 $("#template-3").click(function () {
-  $('#descField').val("Bar/Restaurant");
+  $('#descField').val("For <month>");
 })
 
 $("#template-4").click(function () {
-  $('#descField').val("Home Expenses");
+  userField = '';
+  $('#descField').val("Interest for <month>");
+  $("#btn-michael").css("-webkit-filter", "grayscale(0%)")
+  $("#btn-michael").css("filter", "grayscale(0%)")
+  $("#btn-sherry").css("-webkit-filter", "grayscale(0%)")
+  $("#btn-sherry").css("filter", "grayscale(0%)")
 })
 
 /*Ready*/
@@ -200,13 +186,13 @@ function sendTransaction() {
   let minute = (today.getMinutes() < 10 ? '0' + today.getMinutes() : today.getMinutes());
 
   var dateField = unformatDate($("#dateField").val()) + "/" + today.getFullYear()
-  
+
   var timeField = hour + ":" + minute + ":00";
   var amtField = $("#amtField").val();
   var descField = $("#descField").val();
   typeField = typeField.toLowerCase().charAt(0).toUpperCase() + typeField.toLowerCase().substring(1);
 
-  
+
   let message = dateField + ' ' + timeField + ' ' + amtField + ' ' + typeField + ' ' + userField + ' ' + descField
 
   if (validateSubmit(dateField, timeField, amtField)) {
