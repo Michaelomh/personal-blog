@@ -15,34 +15,33 @@ $(document).ready(function () {
     }
   }
 
-  var events = [
-    {
-      date: 'Q1 - 2018',
-      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
-        		},
-    {
-      date: 'Q2 - 2018',
-      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
-        		},
-    {
-      date: 'Q3 - 2018',
-      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
-        		},
-    {
-      date: 'Q4 - 2018',
-      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
-        		},
-    {
-      date: 'Q1 - 2019',
-      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
-                }
-        	];
-
-  $('#my-timeline').roadmap(events, {
-    eventsPerSlide: 50,
-    slide: 1,
-    orientation: 'vertical'
-  });
+//  var events = [
+//    {
+//      title: 'Software Engineer Program',
+//      date: 'Aug 2018 - Present',
+//      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
+//    },
+//    {
+//      date: 'Aug 2014 - May 2018',
+//      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
+//    },
+//    {
+//      title: 'Business Intelligence Analyst (Intern)',
+//      date: 'Mar 2017 - Nov 2017',
+//      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
+//    },
+//    {
+//      title: 'Full Stack Developer (Intern)',
+//      date: 'May 2016 - Aug 2016',
+//      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
+//    }
+//  ];
+//
+//  $('#my-timeline').roadmap(events, {
+//    eventsPerSlide: 50,
+//    slide: 1,
+//    orientation: 'vertical',
+//
+//  });
 
 });
-

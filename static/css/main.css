@@ -638,7 +638,3 @@ div.col-sm-4 img.profile-avatar {
     padding: 8px;
   }
 }
-
-.roadmap--orientation-vertical .roadmap__events__event:nth-child(odd) .event {
-  top: -20px !important;
-}
