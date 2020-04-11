@@ -380,7 +380,7 @@ div.col-sm-4 img.profile-avatar {
 
 .about-text {
   font-size: 2rem;
-  line-height: 1.8;
+  line-height: 1.4;
   text-align: justify;
   display: block;
 }
@@ -405,39 +405,25 @@ div.col-sm-4 img.profile-avatar {
   border: 3px solid #e08d2a;
 }
 
-.skill-tree {
-  padding: 0px 5rem;
-  float: left;
-  width: 100%;
-  margin-bottom: 3rem;
+.review-container {
+  margin-top: 20px;
+  border-left: 3px solid #666;
+  padding: 0px 35px;
 }
 
-.progress {
-  position: relative;
-  height: 28px;
-  margin-bottom: 16px;
-  font-weight: bold;
+.review-text {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  text-align: justify;
+  display: block;
 }
 
-.progress-bar {
-  background-color: #e08d2a;
-}
-
-.progress .progress-type {
-  position: absolute;
-  left: 0px;
-  padding: 3px 0px 2px 20px;
-  color: rgb(255, 255, 255);
-  background-color: rgba(25, 25, 25, 0.2);
-  width: 33%;
-  text-align: left;
-}
-
-.progress .progress-completed {
-  position: absolute;
-  right: 0px;
-  padding: 3px 10px 2px;
-  font-weight: bold;
+.review2-text {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  font-style: italic;
+  color: #666;
+  float: right;
 }
 
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "[Project] Zeguestlist Showcase"
+title:  "[Project] Onlive.io Showcase"
 date:   2016-08-01
 categories: [my_projects]
 ---
 
 # Overview #
 --- 
-**Description**: In my 2nd year in SMU, I interned in a IT Events Company, ZeguestList, as a Full Stack Developer. This Scandinavian-owned company provides IT events solutions that such as Events Application, Online Registration, Check-in and Badging, Photo Kiosk, Spotify Jukebox, event website creation and management, etc. I was fortunate to be there to learn so much about the MICE industry. 
+**Description**: In my 2nd year in SMU, I interned in a IT Events Company, Onlive.io (formally ZeguestList), as a Full Stack Developer. This Scandinavian-owned company provides IT events solutions that such as Events Application, Online Registration, Check-in and Badging, Photo Kiosk, Spotify Jukebox, event website creation and management, etc. I was fortunate to be there to learn so much about the MICE industry. 
 
 Throughout my internship, I've been brought to many big client meetings to discuss about the solution the company provides. This companies range from small companies to Multinational Companies (IBM, MasterCard, George P. Johnson). From understanding the clients' needs and translating into IT events solutions, I've learnt how to communicate better and think in terms of the client to provide better solutions. Seeing my work live was really fulfilling. 
 

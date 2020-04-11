@@ -50,15 +50,19 @@
 .timeline-item {
   padding-left: 40px;
   position: relative;
-  transition-duration: 0.5s
+  display: none;
+}
+
+.timeline-item > a {
+  color: #333;
+}
+
+.timeline-item > a:hover {
+  color: #f99b27;
 }
 
 .timeline-item:last-child {
   padding-bottom: 0;
-}
-
-.timeline-item:hover {
-  color: #f99b27;
 }
 
 /*----- TIMELINE INFO -----*/
@@ -165,14 +169,12 @@
 }
 
 /*------------- MOD: TIMELINE CENTERED ------------*/
-
 @media (min-width: 992px) {
   .timeline-centered,
   .timeline-centered .timeline-item,
   .timeline-centered .timeline-info,
   .timeline-centered .timeline-marker,
   .timeline-centered .timeline-content {
-    display: block;
     margin: 0;
     padding: 0;
   }

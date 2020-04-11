@@ -15,33 +15,11 @@ $(document).ready(function () {
     }
   }
 
-//  var events = [
-//    {
-//      title: 'Software Engineer Program',
-//      date: 'Aug 2018 - Present',
-//      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
-//    },
-//    {
-//      date: 'Aug 2014 - May 2018',
-//      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
-//    },
-//    {
-//      title: 'Business Intelligence Analyst (Intern)',
-//      date: 'Mar 2017 - Nov 2017',
-//      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
-//    },
-//    {
-//      title: 'Full Stack Developer (Intern)',
-//      date: 'May 2016 - Aug 2016',
-//      content: 'Lorem ipsum dolor sit amet<small>Consectetur adipisicing elit</small>'
-//    }
-//  ];
-//
-//  $('#my-timeline').roadmap(events, {
-//    eventsPerSlide: 50,
-//    slide: 1,
-//    orientation: 'vertical',
-//
-//  });
 
+  //timeline -display
+  $("#timeline-1").delay(100).fadeIn(1500);
+  $("#timeline-2").delay(300).fadeIn(1500);
+  $("#timeline-3").delay(500).fadeIn(1500);
+  $("#timeline-4").delay(700).fadeIn(1500);
+  $("#timeline-5").delay(900).fadeIn(1500);
 });

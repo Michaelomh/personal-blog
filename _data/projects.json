@@ -56,9 +56,9 @@
 		"tags": ["Data Analytics", "Front-End Dev"]
 	}, {
 		"slug": "ZG-Showcase",
-        "name": "Zeguestlist Showcase",
-		"image": "Zeguestlist_Showcase.jpg",
-		"url": "../my_projects/2016/08/01/Zeguestlist-Showcase.html",
+        "name": "Onlive.io Showcase",
+		"image": "onlive_Showcase.jpg",
+		"url": "../my_projects/2016/08/01/onliveio-Showcase.html",
 		"date": "Aug 2016",
 		"tags": ["Data Analytics", "Front-End Dev", "Back-End Dev"]
 	}
