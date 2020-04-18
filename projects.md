@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Projects
+title: Portfolio
 description: Showcase of some of my projects
-permalink: /projects/
+permalink: /portfolio/
 ---

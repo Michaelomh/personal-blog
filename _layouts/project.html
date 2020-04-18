@@ -23,7 +23,26 @@ layout: default
 
         {% if p_url == nil %}{% assign p_url = i.url %}{% endif %}
 
-            <div class="project-item project-outer" data-tags='{{ i.tags | jsonify | downcase }}'>
+<div class="project-item project-outer" data-tags='{{ i.tags | jsonify | downcase }}'>
+    <div class="project-inner">
+      <div class="project-img img-responsive" style="background-image: url('/static/projects/{{ i.image }}');">
+        <div class="project-overlay"></div>
+        <div class="project-section">
+          <p class="project-timeline" style="">{{ i.date }}</p>
+          <p class="project-headlines" style="">{{ i.name }}</p>
+          <br/><br/>
+          <a type="button" href="{{ p_url }}" class="btn-project">View Project</a>
+        </div>
+      </div>
+
+    </div>
+</div>
+          {% endfor %}
+        </div>
+    </div>
+  
+<!--
+              <div class="project-item project-outer" data-tags='{{ i.tags | jsonify | downcase }}'>
                 <a class="project-detail" href="{{ p_url }}">
                     <div class="project-inner">
                         <div class="project-img img-responsive" style="background-image: url('/static/projects/{{ i.image }}');">
@@ -32,7 +51,6 @@ layout: default
                         </div>
                     </div>
                 </a>
-<!--
                 <div class="project-content">
                     <div class="tag-holder">
                         {% for j in i.tags %}
@@ -41,8 +59,4 @@ layout: default
                     </div>
                 </div>
 -->
-            </div>
-          {% endfor %}
-        </div>
-    </div>
 </article>

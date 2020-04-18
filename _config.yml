@@ -26,8 +26,8 @@ social:
 urls:
     - text: About Me
       url: /about/
-    - text: Projects
-      url: /projects/
+    - text: Portfolio
+      url: /portfolio/
     - text: Timeline
       url: /timeline/
     - text: Search
