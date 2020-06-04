@@ -148,9 +148,12 @@ $(document).ready(function () {
 //retrieve data
 function retrievePastTransactions() {
   const sheetId = '1ATRPbe_RUS0rjJ2d1glCuVRsm6reql0zZIKbwvqBvEA'
-  var url = "https://spreadsheets.google.com/feeds/list/" + sheetId + "/od6/public/values?alt=json";
+  var url2 = "https://spreadsheets.google.com/feeds/list/" + sheetId + "/od6/public/values?alt=json";
+  
+  var url = "https://spreadsheets.google.com/feeds/list/" + sheetId + "/1/public/full?alt=json"
 
   $.getJSON(url, function (data) {
+    console.log(data);
 
     var entries = data.feed.entry;
     let maxRows = 5
@@ -158,17 +161,18 @@ function retrievePastTransactions() {
     entries.slice().reverse().forEach(function (entry) {
       let tableTypeStyle = (entry.gsx$type.$t.trim() === 'Income' ? 'ta-income' : 'ta-expense')
       if (entry.gsx$amount.$t.length > 0 && currentRows < maxRows) {
+        console.log(entry);
         $('.table-transactions').append(
           "<table class='table table-xs'><tr>" +
           "<td class='ta-comments'>" +
           entry.gsx$comments.$t +
           "</td><td class='tar " + tableTypeStyle + "'>" +
-          (entry.gsx$type.$t.trim() === 'Income' ? '+' : '-') + entry.gsx$amount.$t +
+          (entry.gsx$type.$t.trim() === 'Income' ? '+' : '-') + ' $' + entry.gsx$amount.$t +
           "</td></tr><tr>" +
           "<td class='ta-date'>" +
-          formatDate(entry.gsx$date.$t.trim()) +
+          formatDate(entry.gsx$date.$t.trim()) + 
           "</td><td class='tar'>" +
-          entry.gsx$user.$t +
+          entry.gsx$person.$t +
           "</td></tr></table>");
         currentRows++;
       }
