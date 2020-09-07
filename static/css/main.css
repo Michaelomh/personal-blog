@@ -79,6 +79,7 @@ a:hover {
   padding-bottom: 25px;
   width: 100%;
   text-align: center;
+  margin-top: 7rem;
 }
 
 .post-title {
@@ -167,7 +168,7 @@ div.col-sm-3 img.profile-avatar {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.2rem;
-  font-size: 5em;
+  font-size: 4.5em;
   color: #fff;
   line-height: 6rem;
   white-space: nowrap;
@@ -259,7 +260,7 @@ div.col-sm-3 img.profile-avatar {
 
 .fixed-condition {
   position: fixed;
-  min-width: 255px;
+  width: 25%;
   height: 100vh;
   background-color: #323232;
   padding: 25px;
@@ -434,7 +435,10 @@ div.col-sm-3 img.profile-avatar {
 
 /* Responsive Conditional */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
+  .home {
+    height: 85vh;
+  }
   .fixed-condition {
     position: initial;
     height: 100%;
@@ -477,7 +481,7 @@ div.col-sm-3 img.profile-avatar {
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.5rem;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     color: #fff;
     line-height: 4rem;
     float: left;
@@ -504,7 +508,15 @@ div.col-sm-3 img.profile-avatar {
   .about-profile {
     margin-bottom: 12rem;
   }
+  .about-text {
+    margin: 10px 8rem;
+  }
+  
 }
+
+/*
+  For phone screens
+*/
 
 @media (max-width: 767px) {
   .post {
@@ -548,7 +560,7 @@ div.col-sm-3 img.profile-avatar {
     margin: auto;
   }
   div.col-sm-3 div.profile-about {
-margin-top: 10px;
+    margin-top: 10px;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-size: 2rem;
@@ -560,6 +572,7 @@ margin-top: 10px;
     text-align: center;
     margin-top: 20px;
     width: 100%;
+    padding-bottom: 0px;
   }
   .navi {
     text-transform: uppercase;
@@ -568,6 +581,8 @@ margin-top: 10px;
     font-size: 2.8rem;
     color: #fff;
     line-height: 3rem;
+    float: none;
+    margin-right: 0px;
   }
   .social {
     display: block;
@@ -629,4 +644,21 @@ margin-top: 10px;
     float: left;
     padding: 8px;
   }
+}
+
+
+/*
+  For 1366px - 1440px monitor screens
+*/
+
+@media (min-width: 1300px) and (max-width: 1440px) {
+  .navi {
+    font-size: 4em;
+    line-height: 5rem;
+  }
+  
+  .about-text {
+    margin : 16px 17rem;
+  }
+
 }
