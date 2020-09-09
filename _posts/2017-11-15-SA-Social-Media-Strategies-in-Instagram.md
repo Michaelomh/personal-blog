@@ -7,11 +7,11 @@ categories: [my_projects]
 
 # Overview #
 --- 
-**Abstract Poster Link:** [Abstract Poster](https://drive.google.com/file/d/186tq5oK1Q3VbpscZ0ExvNNzA6DVJMyfL/view?usp=sharing)
+**Abstract Poster Link:** [Abstract Poster](https://drive.google.com/file/d/1zo598YFzL_9RKpZsdX4cEf3bl6v7cICA/view?usp=sharing)
 
-**Full Report Link:** [Full Report](https://drive.google.com/file/d/100waJQwHcEtZ0qYykF4orMUu-cycAY-L/view?usp=sharing)
+**Full Report Link:** [Full Report](https://drive.google.com/file/d/1X_0Llc2AeDspls6RbbVmFjomCVhIZDTK/view?usp=sharing)
 
-**Final Presentation Link**: [Final Presentation](https://drive.google.com/file/d/1xGARhpco0xE-JHUjb93cECOdGET9T5RR/view?usp=sharing)
+**Final Presentation Link**: [Final Presentation](https://drive.google.com/file/d/1wJumdXmx5dLxH0aQUMOnWUC3zStXcPjP/view?usp=sharing)
 
 **Tools Used:** Python, Tableau, py-tesseract
 

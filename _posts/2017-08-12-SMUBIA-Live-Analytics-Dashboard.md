@@ -13,7 +13,7 @@ categories: [my_projects]
 
 **Tools Used:** HTML/CSS, JavaScript, jQuery, Adobe Photoshop, Google Sheets APIs
 
-**Visualisation URL:** [https://smubia.github.io/SMUBIA-VivaceAnalytics/](https://smubia.github.io/SMUBIA-VivaceAnalytics/)
+**Visualisation URL (no data):** [https://smubia.github.io/SMUBIA-VivaceAnalytics/](https://smubia.github.io/SMUBIA-VivaceAnalytics/)
 
 ## Images ##
 

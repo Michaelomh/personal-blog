@@ -9,9 +9,9 @@ categories: [my_projects]
 --- 
 **Description**: This dashboard is created for the class, IS428 Visual Analytics and Business Intelligence. This dashboard is for airlines to view the various passengers travelling within the United States in 2015. We hope that this dashboard can help airline companies with planning and optimizing their routes to ensure a full load of passengers, as well as finding new routes to offer to passengers. 
 
-**Abstract Poster Link:** [Air Travel Poster](https://drive.google.com/file/d/0B4co3D7kCi9obGFqODMwMTJRUkk/view?usp=sharing)
+**Abstract Poster Link:** [Air Travel Poster](https://drive.google.com/file/d/1alO_e-yLXl35oJjClz2zmp3rBq0IWpOI/view?usp=sharing)
 
-**Full Report Link:** [Air Travel Full Report](https://drive.google.com/file/d/0B4co3D7kCi9oMXU5ajBQVDZGYlE/view?usp=sharing)
+**Full Report Link:** [Air Travel Full Report](https://drive.google.com/file/d/1sWKe4XWJr5w75R16WRRFbsPWMpiQJKJN/view?usp=sharing)
 
 **Tools Used:** HTML/CSS, JavaScript, jQuery, Adobe Photoshop, D3.js, Python (Data Cleaning)
 

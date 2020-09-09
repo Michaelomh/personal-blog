@@ -9,9 +9,9 @@ categories: [my_projects]
 --- 
 **Description**: We conducted time series forecasting using ARIMA models to forecast and detect the elderly bathroom activity. For the storage of the data, we are using data warehousing and star schema (Microsoft SQL Server). For the machine learning portion, we used Microsoft Azure Maching Learning to forecast the elderly bathroom activities. 
 
-**Abstract Poster Link:** [Abstract Poster Link](https://drive.google.com/file/d/1OsNDlnhO6mRW1oL9ThhNAJqYfxQtfEKM/view?usp=sharing)
+**Abstract Poster Link:** [Abstract Poster Link](https://drive.google.com/file/d/17h9SQ-gRj_G2Mmn2Q8xSCwVl0MJOTrPA/view?usp=sharing)
 
-**Full Report Link:** [Full Report Link](https://drive.google.com/file/d/1eCjZLnqQ7-hXYZdbg0uK4hbJjCWpPReF/view?usp=sharing)
+**Full Report Link:** [Full Report Link](https://drive.google.com/file/d/1sKGWCyogu7nkoiv_3ttnKUsO-ZkeaCDn/view?usp=sharing)
 
 **Tools Used:** Python, Microsoft Azure Machine Learning, Tableau, JMP, Microsoft Data Server (Data Warehouse), SAS Enterprise
 
