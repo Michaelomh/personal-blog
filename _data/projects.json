@@ -1,65 +1,74 @@
 [
-	{
-		"slug": "",
-        "name": "Winner of Web Design Challenge",
-		"image": "ellipsisC5.jpg",
-		"url": "https://michaelomh.github.io/SIS_Metamorphosis_coding_challenge/",
-		"date": "July 2018",
-		"tags": ["Front-End Dev"]
-	},
-    {
-		"slug": "",
-        "name": "datayse.com",
-		"image": "Datayse_Project.jpg",
-		"url": "http://www.datayse.com",
-		"date": "Jan 2018",
-		"tags": ["Front-End Dev"]
-	}, 
-    {
-		"slug": "SA-instagram",
-        "name": "Social Media Strategies in Instagram",
-		"image": "social-analytics-project.jpg",
-		"url": "../my_projects/2017/11/15/SA-Social-Media-Strategies-in-Instagram.html",
-		"date": "Jan 2018",
-		"tags": ["Data Analytics"]
-	}, 
-    {
-		"slug": "DS-forecast",
-        "name": "Forecasting and detecting elderly inactiveness",
-		"image": "TimeSeries-Forecasting.jpg",
-		"url": "../my_projects/2017/04/27/DWBA-predicting-elderly-bathoom-activity.html",
-		"date": "Jan 2018",
-		"tags": ["Data Analytics"]
-	},
-    {
-		"slug": "",
-        "name": "SMUBIA Live Analytics Dashboard",
-		"image": "VA-SMUBIA.jpg",
-		"url": "../my_projects/2017/08/12/SMUBIA-Live-Analytics-Dashboard.html",
-		"date": "Aug 2017",
-		"tags": ["Data Analytics", "Front-End Dev"]
-	}, 
-    {
-		"slug": "",
-        "name": "IoT Shopping Cart Misuse Dashboard",
-		"image": "iot-project.jpg",
-		"url": "../my_projects/2017/04/10/IOT-shoppingcart-Dashboard.html",
-		"date": "Apr 2017 ",
-		"tags": ["Data Analytics", "Front-End Dev"]
-	}, 
-    {
-		"slug": "VA-flights",
-        "name": "Analyzing Passengers US Domestic Flights in 2015",
-		"image": "VA_project.jpg",
-		"url": "../my_projects/2017/01/29/Visualising-Passengers-within-US-in-2015.html",
-		"date": "Jan 2017",
-		"tags": ["Data Analytics", "Front-End Dev"]
-	}, {
-		"slug": "ZG-Showcase",
-        "name": "Onlive.io Showcase",
-		"image": "onlive_Showcase.jpg",
-		"url": "../my_projects/2016/08/01/onliveio-Showcase.html",
-		"date": "Aug 2016",
-		"tags": ["Data Analytics", "Front-End Dev", "Back-End Dev"]
-	}
+  {
+    "slug": "",
+    "name": "Bar Website (anonymize)",
+    "image": "restaurant-app.png",
+    "url": "https://marvelous-crepe-bbd4f4.netlify.app/",
+    "date": "Jan 2020",
+    "tags": ["Front-End Dev"]
+  },
+  {
+    "slug": "",
+    "name": "Winner of Web Design Challenge",
+    "image": "ellipsisC5.jpg",
+    "url": "https://michaelomh.github.io/SIS_Metamorphosis_coding_challenge/",
+    "date": "July 2018",
+    "tags": ["Front-End Dev"]
+  },
+  {
+    "slug": "",
+    "name": "datayse.com",
+    "image": "Datayse_Project.jpg",
+    "url": "http://www.datayse.com",
+    "date": "Jan 2018",
+    "tags": ["Front-End Dev"]
+  },
+  {
+    "slug": "SA-instagram",
+    "name": "Social Media Strategies in Instagram",
+    "image": "social-analytics-project.jpg",
+    "url": "../my_projects/2017/11/15/SA-Social-Media-Strategies-in-Instagram.html",
+    "date": "Jan 2018",
+    "tags": ["Data Analytics"]
+  },
+  {
+    "slug": "DS-forecast",
+    "name": "Forecasting and detecting elderly inactiveness",
+    "image": "TimeSeries-Forecasting.jpg",
+    "url": "../my_projects/2017/04/27/DWBA-predicting-elderly-bathoom-activity.html",
+    "date": "Jan 2018",
+    "tags": ["Data Analytics"]
+  },
+  {
+    "slug": "",
+    "name": "SMUBIA Live Analytics Dashboard",
+    "image": "VA-SMUBIA.jpg",
+    "url": "../my_projects/2017/08/12/SMUBIA-Live-Analytics-Dashboard.html",
+    "date": "Aug 2017",
+    "tags": ["Data Analytics", "Front-End Dev"]
+  },
+  {
+    "slug": "",
+    "name": "IoT Shopping Cart Misuse Dashboard",
+    "image": "iot-project.jpg",
+    "url": "../my_projects/2017/04/10/IOT-shoppingcart-Dashboard.html",
+    "date": "Apr 2017 ",
+    "tags": ["Data Analytics", "Front-End Dev"]
+  },
+  {
+    "slug": "VA-flights",
+    "name": "Analyzing Passengers US Domestic Flights in 2015",
+    "image": "VA_project.jpg",
+    "url": "../my_projects/2017/01/29/Visualising-Passengers-within-US-in-2015.html",
+    "date": "Jan 2017",
+    "tags": ["Data Analytics", "Front-End Dev"]
+  },
+  {
+    "slug": "ZG-Showcase",
+    "name": "Onlive.io Showcase",
+    "image": "onlive_Showcase.jpg",
+    "url": "../my_projects/2016/08/01/onliveio-Showcase.html",
+    "date": "Aug 2016",
+    "tags": ["Data Analytics", "Front-End Dev", "Back-End Dev"]
+  }
 ]
